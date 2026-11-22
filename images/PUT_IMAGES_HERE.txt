@@ -1,5 +1,0 @@
-Place your 4 Radha-Krishna artworks in this folder with these exact names (either .png or .jpg works automatically):
-- hero.png   (or hero.jpg)
-- haldi.png  (or haldi.jpg)
-- sangeet.png (or sangeet.jpg)
-- vivah.png  (or vivah.jpg)
