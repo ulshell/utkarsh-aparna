@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utkarsh &amp; Aparna | Wedding Invitation — January 28–29, 2027</title>
+
+  <!-- Open Graph / WhatsApp Preview Meta Tags -->
+  <meta name="description" content="With the blessings of Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra and Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey, we joyfully invite you to celebrate the wedding of Utkarsh &amp; Aparna in Kanpur on January 28–29, 2027." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ulshell.github.io/utkarsh-aparna/" />
+  <meta property="og:title" content="Utkarsh &amp; Aparna — Wedding Invitation" />
+  <meta property="og:description" content="Join us in Kanpur on January 28–29, 2027 to celebrate the union of Utkarsh Mishra &amp; Aparna Dubey." />
+  <meta property="og:image" content="https://ulshell.github.io/utkarsh-aparna/images/hero.png" />
+  <meta property="og:image:alt" content="Radha and Krishna — Utkarsh and Aparna Wedding Invitation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Utkarsh &amp; Aparna — Wedding Invitation" />
+  <meta name="twitter:description" content="January 28–29, 2027 • Kanpur, Uttar Pradesh" />
+  <meta name="twitter:image" content="https://ulshell.github.io/utkarsh-aparna/images/hero.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            peacock: {
+              950: '#040e18',
+              900: '#081c2e',
+              800: '#0d2b45',
+              700: '#133e63',
+            },
+            gold: {
+              200: '#f7e7b4',
+              300: '#ebd07e',
+              400: '#d4af37',
+              500: '#b89124',
+              600: '#8f6e15',
+            },
+            ivory: '#fdfaf2',
+            lotus: '#e8a2b4',
+          },
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+            script: ['Great Vibes', 'cursive'],
+            sans: ['Montserrat', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --peacock-deep: #081c2e;
+      --gold-rich: #d4af37;
+      --gold-light: #f7e7b4;
+      --ivory: #fdfaf2;
+    }
+
+    body {
+      background-color: #081c2e;
+      color: #fdfaf2;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Gold foil shimmer text */
+    .gold-foil {
+      background: linear-gradient(
+        110deg,
+        #b89124 0%,
+        #f7e7b4 28%,
+        #d4af37 50%,
+        #fff4cf 72%,
+        #b89124 100%
+      );
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmerGold 5.5s linear infinite;
+    }
+
+    @keyframes shimmerGold {
+      0% { background-position: 0% center; }
+      100% { background-position: 220% center; }
+    }
+
+    /* Entrance Doors */
+    #entrance-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      pointer-events: auto;
+      transition: opacity 0.9s ease 0.8s, visibility 0.9s ease 0.8s;
+    }
+
+    #entrance-overlay.opened {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .door-panel {
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(circle at center, #0e304d 0%, #061422 85%);
+      border-color: rgba(212, 175, 55, 0.45);
+      transition: transform 1.25s cubic-bezier(0.77, 0, 0.175, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .door-left {
+      border-right: 1px solid rgba(212, 175, 55, 0.5);
+    }
+
+    .door-right {
+      border-left: 1px solid rgba(212, 175, 55, 0.5);
+    }
+
+    #entrance-overlay.opened .door-left {
+      transform: translateX(-100%);
+    }
+
+    #entrance-overlay.opened .door-right {
+      transform: translateX(100%);
+    }
+
+    .door-center-seal {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: opacity 0.45s ease, transform 0.6s ease;
+    }
+
+    #entrance-overlay.opened .door-center-seal {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+
+    /* Jharokha Arch Frame */
+    .jharokha-frame {
+      border-radius: 9999px 9999px 24px 24px;
+      border: 2px solid rgba(212, 175, 55, 0.7);
+      box-shadow:
+        0 0 0 6px rgba(8, 28, 46, 0.9),
+        0 0 0 7px rgba(212, 175, 55, 0.35),
+        0 24px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Glassmorphic Card */
+    .temple-card {
+      background: linear-gradient(160deg, rgba(13, 43, 69, 0.72) 0%, rgba(6, 20, 34, 0.88) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Soundwave bars */
+    .wave-bar {
+      width: 3px;
+      height: 12px;
+      background: linear-gradient(to top, #b89124, #f7e7b4);
+      border-radius: 999px;
+      transform-origin: bottom;
+      transition: height 0.25s ease;
+    }
+
+    .playing .wave-bar:nth-child(1) { animation: waveBounce 0.9s ease-in-out infinite 0.0s; }
+    .playing .wave-bar:nth-child(2) { animation: waveBounce 0.75s ease-in-out infinite 0.15s; }
+    .playing .wave-bar:nth-child(3) { animation: waveBounce 1.05s ease-in-out infinite 0.3s; }
+    .playing .wave-bar:nth-child(4) { animation: waveBounce 0.85s ease-in-out infinite 0.45s; }
+
+    @keyframes waveBounce {
+      0%, 100% { transform: scaleY(0.35); }
+      50% { transform: scaleY(1.25); }
+    }
+
+    /* Subtle patterned background */
+    .mandala-bg {
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(212, 175, 55, 0.12), transparent 36%),
+        radial-gradient(circle at 82% 24%, rgba(232, 162, 180, 0.09), transparent 38%),
+        radial-gradient(circle at 50% 80%, rgba(19, 62, 99, 0.4), transparent 55%);
+    }
+
+    /* Fallback art container */
+    .art-fallback {
+      background: radial-gradient(circle at 50% 35%, #16446b 0%, #081c2e 70%, #040e18 100%);
+    }
+  </style>
+</head>
+<body class="mandala-bg selection:bg-gold-400/30 selection:text-gold-200">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] z-50 bg-gradient-to-r from-gold-600 via-gold-200 to-gold-400" style="width: 0%;"></div>
+
+  <!-- Floating Particles Canvas -->
+  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Dual-Mode Krishna Flute Audio -->
+  <audio id="krishnaFluteAudio" loop preload="auto" src="audio/krishna-flute.mp3"></audio>
+
+  <!-- Entrance Double Doors Overlay -->
+  <div id="entrance-overlay" aria-label="Wedding Invitation Cover">
+    <div class="door-panel door-left"></div>
+    <div class="door-panel door-right"></div>
+
+    <div class="door-center-seal px-5">
+      <div class="temple-card max-w-md w-full rounded-3xl p-8 sm:p-10 text-center border-gold-400/50 relative">
+        <p class="font-serif text-gold-300 text-lg tracking-[0.18em] mb-2">|| श्री गणेशाय नमः ||</p>
+
+        <!-- Morpankh & Bansuri SVG Emblem -->
+        <div class="mx-auto my-4 w-20 h-20 rounded-full border border-gold-400/40 bg-peacock-950/60 flex items-center justify-center shadow-lg">
+          <svg viewBox="0 0 64 64" class="w-12 h-12 text-gold-300" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 46 L52 18" stroke-linecap="round" stroke-width="2.4" stroke="#ebd07e" />
+            <circle cx="24" cy="37.6" r="1.3" fill="#081c2e" />
+            <circle cx="30" cy="33.4" r="1.3" fill="#081c2e" />
+            <circle cx="36" cy="29.2" r="1.3" fill="#081c2e" />
+            <circle cx="42" cy="25" r="1.3" fill="#081c2e" />
+            <path d="M34 12 C42 10 50 17 48 26 C46 34 37 38 30 33 C25 29 26 15 34 12 Z" fill="rgba(19,62,99,0.55)" stroke="#d4af37" />
+            <ellipse cx="38" cy="21" rx="4.5" ry="6" fill="rgba(212,175,55,0.35)" stroke="#f7e7b4" />
+            <circle cx="38" cy="20" r="2.2" fill="#0d2b45" />
+          </svg>
+        </div>
+
+        <p class="text-xs uppercase tracking-[0.28em] text-gold-200/80 mb-2">
+          Mishra &amp; Dubey Families Invite You
+        </p>
+
+        <h1 class="font-script text-5xl sm:text-6xl gold-foil leading-tight py-1">
+          Utkarsh &amp; Aparna
+        </h1>
+
+        <p class="font-serif italic text-ivory/85 text-lg mt-2 mb-6">
+          January 28–29, 2027 &bull; Kanpur
+        </p>
+
+        <button
+          id="open-invite-btn"
+          type="button"
+          class="group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-sm tracking-[0.16em] uppercase shadow-lg shadow-gold-500/20 hover:scale-[1.03] active:scale-[0.98] transition"
+        >
+          <span>Open Invitation</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </button>
+
+        <p class="text-[11px] text-gold-200/60 mt-4 tracking-wider">
+          Tap to begin with serene Krishna Bansuri music
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Krishna Bansuri Controller Pill -->
+  <button
+    id="music-toggle-btn"
+    type="button"
+    aria-label="Toggle Krishna Bansuri Music"
+    class="fixed bottom-5 right-5 z-40 flex items-center gap-3 px-4 py-2.5 rounded-full temple-card border-gold-400/50 text-gold-200 hover:border-gold-300 transition shadow-xl"
+  >
+    <span class="w-7 h-7 rounded-full bg-gold-400/15 border border-gold-400/40 flex items-center justify-center">
+      <svg class="w-4 h-4 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" d="M4 18L20 6" />
+        <circle cx="9.5" cy="13.8" r="0.8" fill="currentColor" />
+        <circle cx="12.5" cy="11.6" r="0.8" fill="currentColor" />
+        <circle cx="15.5" cy="9.4" r="0.8" fill="currentColor" />
+      </svg>
+    </span>
+    <span class="text-xs font-medium tracking-wider uppercase hidden sm:inline">Krishna Bansuri</span>
+    <span id="soundwave" class="flex items-end gap-[3px] h-3.5">
+      <span class="wave-bar"></span>
+      <span class="wave-bar"></span>
+      <span class="wave-bar"></span>
+      <span class="wave-bar"></span>
+    </span>
+    <span id="music-status-label" class="text-[10px] uppercase tracking-widest text-gold-300/80">Play</span>
+  </button>
+
+  <!-- Main Content -->
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center py-16 sm:py-24 px-5 sm:px-8">
+      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+        <!-- Left: Jharokha Hero Artwork -->
+        <div class="lg:col-span-5 flex justify-center reveal">
+          <div class="jharokha-frame relative w-full max-w-[400px] aspect-[4/5] overflow-hidden bg-peacock-950 group">
+            <img
+              id="art-hero"
+              src="images/hero.png"
+              data-alt-ext="images/hero.jpg"
+              data-caption="Eternal Melody by the Yamuna — Radha &amp; Krishna"
+              alt="Radha and Krishna under the Kadamba tree beside the Yamuna river"
+              class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-[1.03] cursor-pointer"
+              onclick="openLightbox(this)"
+              onerror="handleArtError(this, 'Eternal Melody by the Yamuna', 'Place hero.png or hero.jpg inside images/')"
+            />
+            <button
+              type="button"
+              onclick="openLightbox(document.getElementById('art-hero'))"
+              class="absolute top-4 right-4 p-2 rounded-full bg-peacock-950/75 border border-gold-400/40 text-gold-200 hover:bg-peacock-900 transition"
+              aria-label="View artwork fullscreen"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Invitation Typography & Countdown -->
+        <div class="lg:col-span-7 text-center lg:text-left reveal">
+          <p class="font-serif text-gold-300 text-xl tracking-[0.18em] mb-2">|| श्री गणेशाय नमः ||</p>
+          <p class="text-xs sm:text-sm uppercase tracking-[0.3em] text-gold-200/80 mb-4">
+            With the Divine Blessings of Radha &amp; Krishna
+          </p>
+
+          <h1 class="font-script text-6xl sm:text-7xl lg:text-8xl gold-foil leading-tight py-2">
+            Utkarsh &amp; Aparna
+          </h1>
+
+          <p class="font-serif text-xl sm:text-2xl text-ivory/90 mt-3 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Together with our families, we joyfully invite you to bless and celebrate the beginning of our forever.
+          </p>
+
+          <div class="mt-6 inline-flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm text-gold-200">
+            <span class="px-4 py-1.5 rounded-full border border-gold-400/40 bg-peacock-900/60">
+              January 28–29, 2027
+            </span>
+            <span class="px-4 py-1.5 rounded-full border border-gold-400/40 bg-peacock-900/60">
+              Kanpur, Uttar Pradesh
+            </span>
+          </div>
+
+          <!-- Live Countdown -->
+          <div class="mt-8 grid grid-cols-4 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0">
+            <div class="temple-card rounded-2xl py-4 px-2 text-center">
+              <div id="cd-days" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Days</div>
+            </div>
+            <div class="temple-card rounded-2xl py-4 px-2 text-center">
+              <div id="cd-hours" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Hours</div>
+            </div>
+            <div class="temple-card rounded-2xl py-4 px-2 text-center">
+              <div id="cd-mins" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Mins</div>
+            </div>
+            <div class="temple-card rounded-2xl py-4 px-2 text-center">
+              <div id="cd-secs" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Secs</div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a
+              href="#events"
+              class="px-7 py-3 rounded-full bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-xs sm:text-sm tracking-[0.16em] uppercase hover:scale-[1.02] transition"
+            >
+              Wedding Itinerary
+            </a>
+            <a
+              href="#rsvp"
+              class="px-7 py-3 rounded-full border border-gold-400/60 text-gold-200 font-display text-xs sm:text-sm tracking-[0.16em] uppercase hover:bg-gold-400/10 transition"
+            >
+              RSVP &amp; Blessings
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILIES / BRIDE & GROOM SECTION -->
+    <section id="families" class="py-16 sm:py-24 px-5 sm:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">With the Blessings of Our Families</p>
+          <h2 class="font-display text-3xl sm:text-4xl gold-foil">Bride &amp; Groom</h2>
+          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <!-- Groom Card -->
+          <div class="temple-card rounded-3xl p-8 text-center flex flex-col justify-center reveal">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold-300/80 mb-2">The Groom</p>
+            <h3 class="font-script text-5xl gold-foil py-1">Utkarsh Mishra</h3>
+            <p class="font-serif italic text-ivory/80 text-lg mt-3">Son of</p>
+            <p class="font-display text-lg sm:text-xl text-gold-200 mt-1">
+              Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra
+            </p>
+            <p class="text-xs text-ivory/65 mt-3 tracking-wide">Kanpur, Uttar Pradesh</p>
+          </div>
+
+          <!-- Bride Card -->
+          <div class="temple-card rounded-3xl p-8 text-center flex flex-col justify-center reveal">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold-300/80 mb-2">The Bride</p>
+            <h3 class="font-script text-5xl gold-foil py-1">Aparna Dubey</h3>
+            <p class="font-serif italic text-ivory/80 text-lg mt-3">Daughter of</p>
+            <p class="font-display text-lg sm:text-xl text-gold-200 mt-1">
+              Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey
+            </p>
+            <p class="text-xs text-ivory/65 mt-3 tracking-wide">Kanpur, Uttar Pradesh</p>
+          </div>
+        </div>
+
+        <blockquote class="mt-10 text-center font-serif italic text-xl sm:text-2xl text-gold-200/90 max-w-3xl mx-auto reveal">
+          “Where love is eternal as Radha’s devotion and serene as Krishna’s melody, two souls walk together in grace.”
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- WEDDING CELEBRATIONS / ITINERARY -->
+    <section id="events" class="py-16 sm:py-24 px-5 sm:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">Two Days of Celebration</p>
+          <h2 class="font-display text-3xl sm:text-4xl gold-foil">Wedding Celebrations</h2>
+          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <!-- EVENT 1: HALDI -->
+          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
+              <img
+                id="art-haldi"
+                src="images/haldi.png"
+                data-alt-ext="images/haldi.jpg"
+                data-caption="Vrindavan Floral Jhoola — Haldi Ceremony"
+                alt="Radha and Krishna on a floral swing in Vrindavan"
+                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
+                onclick="openLightbox(this)"
+                onerror="handleArtError(this, 'Vrindavan Floral Jhoola', 'Place haldi.png or haldi.jpg inside images/')"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
+                Day 1 &bull; Morning
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <h3 class="font-display text-2xl text-gold-200">Haldi Ceremony</h3>
+              <p class="font-serif italic text-ivory/80 text-base mt-1">A sunlit morning of turmeric, marigolds, and joyful laughter</p>
+
+              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
+                <p><strong class="text-gold-300">Date:</strong> Thursday, January 28, 2027</p>
+                <p><strong class="text-gold-300">Time:</strong> 10:00 AM Onwards</p>
+                <p><strong class="text-gold-300">Venue:</strong> Kesari Mangalam Lawn, Kanpur</p>
+              </div>
+
+              <!-- Dress Code Swatches -->
+              <div class="mt-5 pt-4 border-t border-gold-400/20">
+                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-2">Dress Code: Pastel Shades</p>
+                <div class="flex flex-wrap items-center gap-2">
+                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Blush Pink" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#f6c8d1" title="Blush Pink"></button>
+                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Mint Green" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#bfe6d2" title="Mint Green"></button>
+                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Butter Yellow" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#fae7a5" title="Butter Yellow"></button>
+                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Powder Blue" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#beddf5" title="Powder Blue"></button>
+                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Lavender" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#d8c7f0" title="Lavender"></button>
+                  <span id="haldi-swatch-label" class="text-xs text-gold-200/80 ml-1">Tap a shade</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Kesari+Mangalam+Lawn+Kanpur"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
+                >
+                  Open Maps
+                </a>
+                <button
+                  type="button"
+                  onclick="downloadICS('Utkarsh & Aparna — Haldi Ceremony', '20270128T043000Z', '20270128T083000Z', 'Kesari Mangalam Lawn, Kanpur', 'Haldi Ceremony celebrating Utkarsh Mishra & Aparna Dubey. Dress Code: Pastel Shades.')"
+                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
+                >
+                  Add to Calendar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- EVENT 2: TILAK, BARIKSHA & SANGEET -->
+          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
+              <img
+                id="art-sangeet"
+                src="images/sangeet.png"
+                data-alt-ext="images/sangeet.jpg"
+                data-caption="Starlit Maharaas — Tilak, Bariksha &amp; Sangeet Night"
+                alt="Radha and Krishna dancing in a starlit Vrindavan Raas Leela"
+                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
+                onclick="openLightbox(this)"
+                onerror="handleArtError(this, 'Starlit Maharaas', 'Place sangeet.png or sangeet.jpg inside images/')"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
+                Day 1 &bull; Evening
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <h3 class="font-display text-2xl text-gold-200">Tilak, Bariksha &amp; Sangeet</h3>
+              <p class="font-serif italic text-ivory/80 text-base mt-1">An evening of sacred rituals, music, dance, and celebration</p>
+
+              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
+                <p><strong class="text-gold-300">Date:</strong> Thursday, January 28, 2027</p>
+                <p><strong class="text-gold-300">Time:</strong> 7:00 PM Onwards</p>
+                <p><strong class="text-gold-300">Venue:</strong> Exotica, Status Club Resort, Kanpur</p>
+              </div>
+
+              <!-- Dress Code Swatches -->
+              <div class="mt-5 pt-4 border-t border-gold-400/20">
+                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-2">Dress Code: Dark Indo-Western or Suits</p>
+                <div class="flex flex-wrap items-center gap-2">
+                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Midnight Navy" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#10223d" title="Midnight Navy"></button>
+                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Emerald Green" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#0d4d3a" title="Emerald Green"></button>
+                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Wine Maroon" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#5c1626" title="Wine Maroon"></button>
+                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Charcoal Black" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#23262b" title="Charcoal Black"></button>
+                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Deep Plum" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#3e1c47" title="Deep Plum"></button>
+                  <span id="sangeet-swatch-label" class="text-xs text-gold-200/80 ml-1">Tap a shade</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Exotica+Status+Club+Resort+Kanpur"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
+                >
+                  Open Maps
+                </a>
+                <button
+                  type="button"
+                  onclick="downloadICS('Utkarsh & Aparna — Tilak, Bariksha & Sangeet', '20270128T133000Z', '20270128T173000Z', 'Exotica, Status Club Resort, Kanpur', 'Tilak, Bariksha & Sangeet Night celebrating Utkarsh Mishra & Aparna Dubey. Dress Code: Dark Indo-Western or Suits.')"
+                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
+                >
+                  Add to Calendar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- EVENT 3: SHUBH VIVAH -->
+          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
+              <img
+                id="art-vivah"
+                src="images/vivah.png"
+                data-alt-ext="images/vivah.jpg"
+                data-caption="The Divine Varmala — Shubh Vivah"
+                alt="Radha and Krishna exchanging garlands inside a golden temple pavilion"
+                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
+                onclick="openLightbox(this)"
+                onerror="handleArtError(this, 'The Divine Varmala', 'Place vivah.png or vivah.jpg inside images/')"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
+                Day 2 &bull; Wedding
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <h3 class="font-display text-2xl text-gold-200">Shubh Vivah</h3>
+              <p class="font-serif italic text-ivory/80 text-base mt-1">Sacred Varmala, Vedic Pheras, and heartfelt blessings</p>
+
+              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
+                <p><strong class="text-gold-300">Date:</strong> Friday, January 29, 2027</p>
+                <p><strong class="text-gold-300">Time:</strong> 7:00 PM Onwards</p>
+                <p><strong class="text-gold-300">Venue:</strong> Kesari Mangalam Lawn, Kanpur</p>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-gold-400/20">
+                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-1">Dress Code</p>
+                <p class="text-sm text-ivory/80">Traditional Indian Ethnic &amp; Festive Attire</p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Kesari+Mangalam+Lawn+Kanpur"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
+                >
+                  Open Maps
+                </a>
+                <button
+                  type="button"
+                  onclick="downloadICS('Utkarsh & Aparna — Shubh Vivah', '20270129T133000Z', '20270129T183000Z', 'Kesari Mangalam Lawn, Kanpur', 'Shubh Vivah of Utkarsh Mishra & Aparna Dubey.')"
+                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
+                >
+                  Add to Calendar
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP & BLESSINGS WALL -->
+    <section id="rsvp" class="py-16 sm:py-24 px-5 sm:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">Your Presence Is Our Greatest Gift</p>
+          <h2 class="font-display text-3xl sm:text-4xl gold-foil">RSVP &amp; Blessings Wall</h2>
+          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Form -->
+          <form id="rsvp-form" class="lg:col-span-5 temple-card rounded-3xl p-7 space-y-4 reveal">
+            <div>
+              <label for="guest-name" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Your Name</label>
+              <input
+                id="guest-name"
+                type="text"
+                required
+                placeholder="e.g., Aarav Sharma"
+                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory placeholder-ivory/40 focus:outline-none focus:border-gold-300"
+              />
+            </div>
+
+            <div>
+              <label for="guest-attendance" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Attendance</label>
+              <select
+                id="guest-attendance"
+                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory focus:outline-none focus:border-gold-300"
+              >
+                <option value="Joyfully Attending">Joyfully Attending</option>
+                <option value="Attending Shubh Vivah">Attending Shubh Vivah</option>
+                <option value="Sending Warm Wishes">Sending Warm Wishes from Afar</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="guest-message" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Your Blessings</label>
+              <textarea
+                id="guest-message"
+                rows="3"
+                required
+                placeholder="Write your heartfelt wishes for Utkarsh &amp; Aparna..."
+                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory placeholder-ivory/40 focus:outline-none focus:border-gold-300 resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-3 rounded-xl bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-xs uppercase tracking-[0.18em] hover:scale-[1.01] active:scale-[0.99] transition"
+            >
+              Send Blessings
+            </button>
+          </form>
+
+          <!-- Blessings Wall -->
+          <div class="lg:col-span-7 temple-card rounded-3xl p-7 flex flex-col reveal">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-display text-xl text-gold-200">Heartfelt Wishes</h3>
+              <span id="wishes-count" class="text-xs text-gold-300/80 uppercase tracking-widest"></span>
+            </div>
+            <div id="blessings-list" class="space-y-3.5 max-h-[360px] overflow-y-auto pr-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER & WHATSAPP SHARE -->
+    <footer class="py-14 px-5 border-t border-gold-400/20 text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="font-serif text-gold-300 text-xl">|| राधे कृष्ण ||</p>
+        <h2 class="font-script text-5xl gold-foil my-2">Utkarsh &amp; Aparna</h2>
+        <p class="text-sm text-ivory/75 max-w-xl mx-auto leading-relaxed">
+          Warm regards from <strong class="text-gold-200">Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra</strong> and <strong class="text-gold-200">Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey</strong> along with all family members.
+        </p>
+
+        <div class="mt-6 flex justify-center">
+          <a
+            id="whatsapp-share-btn"
+            href="https://wa.me/?text=With%20the%20blessings%20of%20Mrs.%20Pushpa%20Mishra%20%26%20Mr.%20Manoj%20Mishra%20and%20Mrs.%20Sheela%20Dubey%20%26%20Mr.%20Rajesh%20Dubey%2C%20you%20are%20cordially%20invited%20to%20celebrate%20the%20wedding%20of%20Utkarsh%20%26%20Aparna%20in%20Kanpur%20on%20January%2028%E2%80%9329%2C%202027.%20View%20the%20invitation%3A%20https%3A%2F%2Fulshell.github.io%2Futkarsh-aparna%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-gold-400/50 bg-peacock-900/70 text-gold-200 text-xs uppercase tracking-[0.18em] hover:bg-gold-400/15 transition"
+          >
+            <span>Share on WhatsApp</span>
+          </a>
+        </div>
+
+        <p class="text-[11px] text-ivory/45 mt-8 tracking-wider">
+          January 28–29, 2027 &bull; Kanpur, Uttar Pradesh
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-peacock-950/95 hidden items-center justify-center p-4 sm:p-8" onclick="closeLightbox(event)">
+    <div class="relative max-w-4xl w-full flex flex-col items-center">
+      <button
+        type="button"
+        onclick="closeLightbox()"
+        class="self-end mb-3 px-4 py-1.5 rounded-full border border-gold-400/50 text-gold-200 text-xs uppercase tracking-widest hover:bg-gold-400/15"
+      >
+        Close &times;
+      </button>
+      <img id="lightbox-img" src="" alt="" class="max-h-[78vh] w-auto rounded-2xl border border-gold-400/40 shadow-2xl object-contain" />
+      <p id="lightbox-caption" class="font-serif italic text-gold-200 text-lg mt-3 text-center"></p>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================
+       1. SMART IMAGE FALLBACK (.png -> .jpg -> Ornate Placeholder)
+    ========================================================= */
+    function handleArtError(img, title, hint) {
+      if (!img.dataset.triedAlt && img.dataset.altExt) {
+        img.dataset.triedAlt = '1';
+        img.src = img.dataset.altExt;
+        return;
+      }
+      const wrapper = img.parentElement;
+      img.style.display = 'none';
+      const fallback = document.createElement('div');
+      fallback.className = 'art-fallback w-full h-full flex flex-col items-center justify-center p-6 text-center';
+      fallback.innerHTML = `
+        <p class="font-serif text-gold-300 text-lg tracking-widest mb-1">|| राधे कृष्ण ||</p>
+        <p class="font-display text-gold-200 text-base">${title}</p>
+        <p class="text-xs text-ivory/60 mt-2">${hint}</p>
+      `;
+      wrapper.appendChild(fallback);
+    }
+
+    /* =========================================================
+       2. ENTRANCE DOORS & DUAL-MODE KRISHNA BANSURI AUDIO
+    ========================================================= */
+    const overlay = document.getElementById('entrance-overlay');
+    const openBtn = document.getElementById('open-invite-btn');
+    const musicBtn = document.getElementById('music-toggle-btn');
+    const soundwave = document.getElementById('soundwave');
+    const musicStatus = document.getElementById('music-status-label');
+    const mp3Audio = document.getElementById('krishnaFluteAudio');
+
+    let isPlaying = false;
+    let usingSynth = false;
+    let audioCtx = null;
+    let masterGain = null;
+    let synthTimer = null;
+    let tanpuraNodes = [];
+    let mp3Available = null;
+
+    function updateMusicUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        soundwave.classList.add('playing');
+        musicStatus.textContent = 'Pause';
+      } else {
+        soundwave.classList.remove('playing');
+        musicStatus.textContent = 'Play';
+      }
+    }
+
+    // Expressive Raag Bhupali / Yaman Krishna Bansuri & Tanpura Web Audio Synthesizer
+    function startBansuriSynth() {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!audioCtx) {
+        audioCtx = new AudioContext();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = 0.001;
+        masterGain.connect(audioCtx.destination);
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      usingSynth = true;
+      const now = audioCtx.currentTime;
+      masterGain.gain.cancelScheduledValues(now);
+      masterGain.gain.setValueAtTime(Math.max(masterGain.gain.value, 0.001), now);
+      masterGain.gain.exponentialRampToValueAtTime(0.32, now + 1.2);
+
+      // Gentle Sa-Pa-Sa Tanpura Drone (D3, A3, D4)
+      stopTanpura();
+      [146.83, 220.0, 293.66].forEach((freq, idx) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        const filter = audioCtx.createBiquadFilter();
+        osc.type = idx === 1 ? 'triangle' : 'sine';
+        osc.frequency.value = freq;
+        filter.type = 'lowpass';
+        filter.frequency.value = 520;
+        gain.gain.value = idx === 0 ? 0.075 : 0.04;
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(masterGain);
+        osc.start();
+        tanpuraNodes.push(osc);
+      });
+
+      // Raag Bhupali melody phrases in D major pentatonic (D, E, F#, A, B, D5, E5)
+      const notes = [
+        { f: 587.33, d: 1.4 }, { f: 659.25, d: 1.1 }, { f: 739.99, d: 1.8 }, { f: 880.00, d: 2.0 },
+        { f: 739.99, d: 1.0 }, { f: 659.25, d: 1.2 }, { f: 587.33, d: 2.2 }, { f: 0, d: 0.7 },
+        { f: 739.99, d: 1.2 }, { f: 880.00, d: 1.3 }, { f: 987.77, d: 1.6 }, { f: 1174.66, d: 2.2 },
+        { f: 987.77, d: 1.1 }, { f: 880.00, d: 1.4 }, { f: 739.99, d: 1.6 }, { f: 587.33, d: 2.4 },
+        { f: 0, d: 0.9 }
+      ];
+      let step = 0;
+
+      function playNextNote() {
+        if (!isPlaying || !usingSynth) return;
+        const item = notes[step % notes.length];
+        step++;
+
+        if (item.f > 0) {
+          const t0 = audioCtx.currentTime;
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const vib = audioCtx.createOscillator();
+          const vibGain = audioCtx.createGain();
+          const noteGain = audioCtx.createGain();
+          const lp = audioCtx.createBiquadFilter();
+
+          osc1.type = 'sine';
+          osc2.type = 'triangle';
+          osc1.frequency.setValueAtTime(item.f * 0.985, t0);
+          osc1.frequency.exponentialRampToValueAtTime(item.f, t0 + 0.14);
+          osc2.frequency.setValueAtTime(item.f * 2, t0);
+
+          vib.frequency.value = 5.1;
+          vibGain.gain.setValueAtTime(0, t0);
+          vibGain.gain.linearRampToValueAtTime(4.5, t0 + 0.45);
+          vib.connect(vibGain);
+          vibGain.connect(osc1.frequency);
+
+          lp.type = 'lowpass';
+          lp.frequency.value = 1850;
+
+          const harmGain = audioCtx.createGain();
+          harmGain.gain.value = 0.08;
+
+          noteGain.gain.setValueAtTime(0.0001, t0);
+          noteGain.gain.exponentialRampToValueAtTime(0.24, t0 + 0.18);
+          noteGain.gain.setValueAtTime(0.21, t0 + item.d * 0.72);
+          noteGain.gain.exponentialRampToValueAtTime(0.0001, t0 + item.d + 0.18);
+
+          osc1.connect(lp);
+          osc2.connect(harmGain);
+          harmGain.connect(lp);
+          lp.connect(noteGain);
+          noteGain.connect(masterGain);
+
+          osc1.start(t0);
+          osc2.start(t0);
+          vib.start(t0);
+          osc1.stop(t0 + item.d + 0.22);
+          osc2.stop(t0 + item.d + 0.22);
+          vib.stop(t0 + item.d + 0.22);
+        }
+
+        synthTimer = setTimeout(playNextNote, item.d * 980);
+      }
+
+      playNextNote();
+    }
+
+    function stopTanpura() {
+      tanpuraNodes.forEach(n => { try { n.stop(); } catch (e) {} });
+      tanpuraNodes = [];
+    }
+
+    function stopBansuriSynth() {
+      usingSynth = false;
+      clearTimeout(synthTimer);
+      stopTanpura();
+      if (audioCtx && masterGain) {
+        const now = audioCtx.currentTime;
+        masterGain.gain.cancelScheduledValues(now);
+        masterGain.gain.setValueAtTime(Math.max(masterGain.gain.value, 0.001), now);
+        masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+      }
+    }
+
+    async function startMusic() {
+      updateMusicUI(true);
+      if (mp3Available !== false) {
+        try {
+          mp3Audio.volume = 0.55;
+          await mp3Audio.play();
+          mp3Available = true;
+          return;
+        } catch (err) {
+          mp3Available = false;
+        }
+      }
+      startBansuriSynth();
+    }
+
+    function pauseMusic() {
+      updateMusicUI(false);
+      mp3Audio.pause();
+      stopBansuriSynth();
+    }
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('opened');
+      startMusic();
+    });
+
+    musicBtn.addEventListener('click', () => {
+      if (isPlaying) pauseMusic();
+      else startMusic();
+    });
+
+    /* =========================================================
+       3. LIVE COUNTDOWN (Jan 29, 2027 7:00 PM IST)
+    ========================================================= */
+    const targetDate = new Date('2027-01-29T19:00:00+05:30').getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = Math.max(0, targetDate - now);
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* =========================================================
+       4. INTERACTIVE DRESS CODE SWATCHES
+    ========================================================= */
+    function selectSwatch(btn, labelId) {
+      const label = document.getElementById(labelId);
+      if (label) label.textContent = btn.dataset.name;
+    }
+
+    /* =========================================================
+       5. .ICS CALENDAR EXPORT
+    ========================================================= */
+    function downloadICS(title, startUTC, endUTC, location, description) {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Utkarsh & Aparna Wedding//EN',
+        'BEGIN:VEVENT',
+        `DTSTART:${startUTC}`,
+        `DTEND:${endUTC}`,
+        `SUMMARY:${title}`,
+        `LOCATION:${location}`,
+        `DESCRIPTION:${description}`,
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    /* =========================================================
+       6. LIGHTBOX
+    ========================================================= */
+    function openLightbox(imgEl) {
+      if (!imgEl || imgEl.style.display === 'none') return;
+      const modal = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = imgEl.src;
+      document.getElementById('lightbox-caption').textContent = imgEl.dataset.caption || imgEl.alt;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target.id !== 'lightbox') return;
+      const modal = document.getElementById('lightbox');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    /* =========================================================
+       7. RSVP & LOCALSTORAGE BLESSINGS WALL
+    ========================================================= */
+    const STORAGE_KEY = 'utkarsh_aparna_blessings_v1';
+    const defaultWishes = [
+      {
+        name: 'Mishra & Dubey Families',
+        attendance: 'Joyfully Attending',
+        message: 'May Lord Krishna and Radha shower endless love, peace, and prosperity upon Utkarsh and Aparna.'
+      }
+    ];
+
+    function loadWishes() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        return Array.isArray(saved) && saved.length ? saved : defaultWishes;
+      } catch {
+        return defaultWishes;
+      }
+    }
+
+    function renderWishes() {
+      const wishes = loadWishes();
+      const list = document.getElementById('blessings-list');
+      const count = document.getElementById('wishes-count');
+      count.textContent = `${wishes.length} ${wishes.length === 1 ? 'Wish' : 'Wishes'}`;
+
+      list.innerHTML = wishes.map(w => `
+        <div class="rounded-2xl bg-peacock-950/60 border border-gold-400/25 p-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+            <span class="font-display text-sm text-gold-200">${escapeHtml(w.name)}</span>
+            <span class="text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-gold-400/15 text-gold-300">${escapeHtml(w.attendance)}</span>
+          </div>
+          <p class="font-serif text-base text-ivory/85 leading-relaxed">${escapeHtml(w.message)}</p>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('guest-name').value.trim();
+      const attendance = document.getElementById('guest-attendance').value;
+      const message = document.getElementById('guest-message').value.trim();
+      if (!name || !message) return;
+
+      const wishes = loadWishes();
+      wishes.unshift({ name, attendance, message });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(wishes));
+      renderWishes();
+      e.target.reset();
+      burstConfetti();
+    });
+    renderWishes();
+
+    /* =========================================================
+       8. SCROLL PROGRESS, REVEAL & FLOATING STARDUST CANVAS
+    ========================================================= */
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+      document.getElementById('scroll-progress').style.width = `${Math.min(100, Math.max(0, pct))}%`;
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Particle Canvas
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    for (let i = 0; i < 42; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2.1 + 0.6,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: -Math.random() * 0.35 - 0.1,
+        alpha: Math.random() * 0.6 + 0.2,
+        color: i % 5 === 0 ? '#e8a2b4' : '#ebd07e'
+      });
+    }
+
+    function burstConfetti() {
+      for (let i = 0; i < 36; i++) {
+        particles.push({
+          x: canvas.width / 2,
+          y: canvas.height * 0.65,
+          r: Math.random() * 3.5 + 1.5,
+          vx: (Math.random() - 0.5) * 6,
+          vy: -Math.random() * 6 - 2,
+          alpha: 1,
+          color: i % 2 === 0 ? '#f7e7b4' : '#e8a2b4',
+          temp: true
+        });
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles = particles.filter(p => !p.temp || p.alpha > 0.02);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.temp) {
+          p.vy += 0.12;
+          p.alpha -= 0.015;
+        } else {
+          if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+          if (p.x < -10) p.x = canvas.width + 10;
+          if (p.x > canvas.width + 10) p.x = -10;
+        }
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+</body>
+</html>
