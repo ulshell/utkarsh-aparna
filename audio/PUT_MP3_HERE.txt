@@ -1,4 +1,0 @@
-Optional: Place any Krishna flute MP3 file here named exactly:
-krishna-flute.mp3
-
-If no MP3 is added, the invitation automatically plays the built-in Krishna Bansuri & Tanpura synthesizer.
