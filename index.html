@@ -1,1163 +1,636 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utkarsh &amp; Aparna | Wedding Invitation — January 28–29, 2027</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Utkarsh weds Aparna · #Utkarna</title>
+<meta name="description" content="You are invited to the wedding celebrations of Utkarsh & Aparna, Kanpur">
+<meta property="og:title" content="Utkarsh weds Aparna · #Utkarna">
+<meta property="og:description" content="Tap to open your invitation">
+<meta property="og:image" content="https://ulshell.github.io/utkarsh-aparna/images/web/rammandir_couple.jpg">
+<meta property="og:url" content="https://ulshell.github.io/utkarsh-aparna/">
+<meta name="theme-color" content="#c2410c">
+<link rel="preload" as="image" href="images/web/bg_gate.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#7c2d12;--maroon2:#c2410c;--saffron:#f97316;--gold:#f6c453;--gold2:#ffe8a3;--cream:#fff7e6;--ink:#3b1203}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--cream);background:var(--maroon);
+  background:radial-gradient(ellipse at 50% 0%,#e8590c 0%,#b8420b 30%,#8a2e08 65%,#5c1d06 100%) fixed;overflow-x:hidden;font-size:19px;line-height:1.5}
+body.locked{overflow:hidden;height:100vh;height:100dvh}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.cinzel{font-family:'Cinzel',serif;letter-spacing:.18em;text-transform:uppercase}
+.gold{color:var(--gold);text-shadow:0 0 18px rgba(240,195,90,.35)}
+a{color:inherit}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:5}
 
-  <!-- Open Graph / WhatsApp Preview Meta Tags -->
-  <meta name="description" content="With the blessings of Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra and Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey, we joyfully invite you to celebrate the wedding of Utkarsh &amp; Aparna in Kanpur on January 28–29, 2027." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ulshell.github.io/utkarsh-aparna/" />
-  <meta property="og:title" content="Utkarsh &amp; Aparna — Wedding Invitation" />
-  <meta property="og:description" content="Join us in Kanpur on January 28–29, 2027 to celebrate the union of Utkarsh Mishra &amp; Aparna Dubey." />
-  <meta property="og:image" content="https://ulshell.github.io/utkarsh-aparna/images/hero.png" />
-  <meta property="og:image:alt" content="Radha and Krishna — Utkarsh and Aparna Wedding Invitation" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Utkarsh &amp; Aparna — Wedding Invitation" />
-  <meta name="twitter:description" content="January 28–29, 2027 • Kanpur, Uttar Pradesh" />
-  <meta name="twitter:image" content="https://ulshell.github.io/utkarsh-aparna/images/hero.png" />
+/* ---------- GATES ---------- */
+#gate{position:fixed;inset:0;z-index:50;perspective:1600px;overflow:hidden;background:radial-gradient(#ffe8a3,#f97316 40%,#7c2d12)}
+.door{position:absolute;top:0;bottom:0;width:50%;transition:transform 2.2s cubic-bezier(.6,.05,.3,1);
+  background:
+   radial-gradient(circle,#ffe8a3 0 3px,#b7791f 4px,transparent 5px) 0 0/44px 44px,
+   radial-gradient(circle at 50% 30%,rgba(255,232,163,.25),transparent 45%),
+   linear-gradient(180deg,#f97316,#c2410c 55%,#7c2d12);
+  border:6px solid var(--gold);box-shadow:inset 0 0 0 14px rgba(230,179,74,.18),inset 0 0 80px rgba(0,0,0,.5)}
+.door.l{left:0;transform-origin:left center;border-right-width:3px}
+.door.r{right:0;transform-origin:right center;border-left-width:3px}
+#gate.open .door.l{transform:rotateY(-105deg)}
+#gate.open .door.r{transform:rotateY(105deg)}
+.door .arch{position:absolute;left:12%;right:12%;top:14%;bottom:10%;border:3px solid var(--gold);border-radius:999px 999px 10px 10px;opacity:.7}
+.door .arch::after{content:"";position:absolute;inset:14px;border:1.5px dashed rgba(230,179,74,.6);border-radius:inherit}
+.door .knob{position:absolute;top:52%;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7c2,#c9962b 60%,#7a5410);box-shadow:0 0 18px rgba(240,195,90,.7)}
+.door.l .knob{right:22px}.door.r .knob{left:22px}
+.door .mot{text-shadow:0 2px 0 #7c2d12,0 0 20px rgba(255,232,163,.6);opacity:.9!important;position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);font-size:min(20vw,110px);color:var(--gold);opacity:.55;font-family:'Nirmala UI',Mangal,serif}
+.toran{position:absolute;top:0;left:0;right:0;height:70px;z-index:3;display:flex;justify-content:space-around;pointer-events:none;transition:opacity 1s}
+.toran span{width:22px;height:60px;border-radius:0 0 50% 50%;background:linear-gradient(#f59e0b,#ea580c);box-shadow:0 0 8px rgba(245,158,11,.6)}
+.toran span:nth-child(odd){height:46px;background:linear-gradient(#fbbf24,#f59e0b)}
+#gate.open .toran{opacity:0}
+/* satin ribbon with gold zari borders, stitching, moving sheen and a bow */
+.ribbon{cursor:pointer;position:absolute;top:50%;left:0;right:0;height:60px;margin-top:-30px;z-index:4;display:flex;filter:drop-shadow(0 8px 10px rgba(0,0,0,.55));transition:opacity .8s 1.3s}
+.ribbon i{position:relative;flex:1;overflow:hidden;
+  background:
+   linear-gradient(#b7791f,#fff2b8 45%,#e0a53a 70%,#8a5a12) top/100% 8px no-repeat,
+   linear-gradient(#8a5a12,#e0a53a 30%,#fff2b8 55%,#b7791f) bottom/100% 8px no-repeat,
+   radial-gradient(circle,#ffe8a3 0 1.7px,transparent 2.3px) 0 50%/22px 22px repeat-x,
+   repeating-linear-gradient(45deg,rgba(255,214,120,.16) 0 1.5px,transparent 1.5px 9px),
+   repeating-linear-gradient(-45deg,rgba(255,214,120,.16) 0 1.5px,transparent 1.5px 9px),
+   linear-gradient(180deg,#6d0b0b 0%,#b91c1c 18%,#ef4444 34%,#ff7a6a 42%,#dc2626 52%,#9f1212 74%,#c81e1e 88%,#6d0b0b 100%);
+  transition:transform 1.1s cubic-bezier(.34,1.45,.5,1)}
+.ribbon i:first-child{transform-origin:0 50%}.ribbon i:last-child{transform-origin:100% 50%}
+.ribbon i::before{content:"";position:absolute;left:0;right:0;top:11px;bottom:11px;border-top:1.5px dashed rgba(255,232,163,.75);border-bottom:1.5px dashed rgba(255,232,163,.75)}
+.ribbon i::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);animation:sheen 3.4s ease-in-out infinite}
+.ribbon i:last-child::after{animation-delay:1.7s}
+@keyframes sheen{0%{left:-60%}60%,100%{left:130%}}
+/* bow behind the seal */
+.bow{position:absolute;left:50%;top:50%;width:0;height:0;z-index:5;transition:transform 1.5s cubic-bezier(.5,0,.8,.4),opacity 1.5s}
+.bow b,.bow s{position:absolute;display:block;
+  background:repeating-linear-gradient(45deg,rgba(255,214,120,.14) 0 1.5px,transparent 1.5px 9px),linear-gradient(160deg,#ff8a7a,#dc2626 35%,#991b1b 70%,#6d0b0b);
+  box-shadow:inset 0 0 0 3px #e6b34a,inset 0 0 18px rgba(0,0,0,.45),0 6px 14px rgba(0,0,0,.45)}
+.bow b{width:120px;height:74px;top:-37px;border-radius:60% 40% 40% 60%/55% 50% 50% 45%}
+.bow b:first-child{right:20px;transform:rotate(-14deg);transform-origin:100% 50%}
+.bow b:nth-child(2){left:20px;transform:rotate(14deg);transform-origin:0 50%;border-radius:40% 60% 60% 40%/50% 55% 45% 50%}
+.bow s{width:38px;height:150px;top:10px;clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%)}
+.bow s:nth-child(3){right:-6px;transform:rotate(22deg);transform-origin:50% 0}
+.bow s:nth-child(4){left:-6px;transform:rotate(-22deg);transform-origin:50% 0}
+.bow s::after{content:"";position:absolute;left:0;right:0;bottom:6%;height:3px;background:#e6b34a;opacity:.8}
+#gate.cut .ribbon i:first-child{transform:rotate(78deg)}
+#gate.cut .ribbon i:last-child{transform:rotate(-78deg)}
+#gate.cut .ribbon{opacity:0}
+#gate.cut .bow{transform:translateY(110vh) rotate(35deg);opacity:0}
+@media (prefers-reduced-motion:reduce){.ribbon i::after{animation:none}}
+.seal{position:absolute;left:50%;top:50%;z-index:6;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:none;cursor:pointer;
+  background:radial-gradient(circle at 35% 30%,#fde68a,#e6b34a 45%,#a8701a 100%);box-shadow:0 0 0 6px rgba(253,230,138,.35),0 10px 40px rgba(0,0,0,.6);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink);transition:transform .8s,opacity .8s;animation:pulse 2s infinite}
+.seal{background:radial-gradient(circle at 35% 30%,#ffe8a3,#f6c453 45%,#b7791f 100%)!important}
+.seal b{font-family:'Great Vibes',cursive;font-size:46px;line-height:1;font-weight:400}
+.seal small{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.2em;margin-top:4px}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 6px rgba(253,230,138,.35),0 10px 40px rgba(0,0,0,.6)}50%{box-shadow:0 0 0 18px rgba(253,230,138,.05),0 10px 40px rgba(0,0,0,.6)}}
+#gate.cut .seal{transform:scale(.2) rotate(180deg);opacity:0}
+.gate-hint{position:absolute;left:0;right:0;bottom:12%;text-align:center;z-index:6;font-size:18px;color:var(--gold2);transition:opacity .5s}
+.gate-hint .script{font-size:42px;display:block;color:var(--gold)}
+#gate.cut .gate-hint{opacity:0}
+#gate.gone{opacity:0;visibility:hidden;transition:opacity 1s,visibility 0s 1s}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+/* ---------- ROYAL ---------- */
+.palace{display:block;width:100%;max-width:520px;margin:0 auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.gate-palace{position:absolute;left:0;right:0;top:0;z-index:3;transition:opacity 1s,transform 2s;pointer-events:none}
+.gate-palace svg{width:100%;height:auto;display:block}
+#gate.open .gate-palace{opacity:0;transform:translateY(-40px)}
+.chhatri{display:block;width:150px;margin:14px auto -6px;position:relative;z-index:2;overflow:visible}
+.lanterns{position:absolute;left:0;right:0;top:0;height:0;display:flex;justify-content:space-between;padding:0 6%;pointer-events:none;z-index:3}
+.lantern{width:2px;background:linear-gradient(#f6c453,#b7791f);transform-origin:top center;animation:swing 3.4s ease-in-out infinite}
+.lantern::after{content:"";position:absolute;left:-14px;bottom:-40px;width:30px;height:42px;border-radius:8px 8px 14px 14px;
+  background:radial-gradient(circle at 50% 55%,#fff7c2,#f6c453 40%,#c2410c 75%);box-shadow:0 0 26px 8px rgba(255,200,80,.55);border:2px solid #b7791f}
+.lantern:nth-child(2){animation-delay:-1.2s}.lantern:nth-child(3){animation-delay:-2s}.lantern:nth-child(4){animation-delay:-.6s}
+@keyframes swing{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
+.jharokha{position:relative;padding-top:14px}
+.jharokha::before{content:"";position:absolute;left:50%;top:-8px;width:70%;height:28px;transform:translateX(-50%);
+  background:radial-gradient(circle at 50% 100%,transparent 11px,#f6c453 12px 14px,transparent 15px) 0 0/28px 28px repeat-x;opacity:.9}
+.mahal-bottom{position:fixed;left:0;right:0;bottom:-4px;z-index:0;pointer-events:none;opacity:.18}
+.mahal-bottom svg{width:100%;height:auto;display:block}
+/* ---------- IMAGE BACKDROPS / FIREWORKS ---------- */
+#gate{background:#120404!important}
+/* sharp art layer + blurred fill: phones = full-bleed cover; wide screens (tablet landscape / laptop / TV) = whole image, sides filled with soft blur so it never upscales/pixelates */
+.gate-blur,.gate-art{position:absolute;top:0;left:0;right:0;bottom:0;background:url(images/web/bg_gate.jpg) center/cover no-repeat;z-index:0}
+.gate-blur{display:none;filter:blur(28px) brightness(.7);transform:scale(1.15)}
+@media (min-aspect-ratio:3/4){.gate-blur{display:block}.gate-art{background-size:contain}}
+.gate-art::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(transparent 40%,rgba(0,0,0,.55))}
+#gate.open .gate-hint2{opacity:1;transform:none}
+.gate-hint2{position:absolute;left:0;right:0;bottom:9%;z-index:2;text-align:center;opacity:0;transform:translateY(20px);transition:all 1s 1.2s}
+.gate-hint2 .script{font-size:54px;color:#ffe8a3;text-shadow:0 0 20px #f97316,0 2px 4px #000}
+#fw{position:fixed;inset:0;pointer-events:none;z-index:52}
+.hero-bg{position:absolute;inset:0 -18px;z-index:-1;background:url(images/web/bg_hero.jpg) center top/cover no-repeat;
+  -webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);opacity:.9}
+.hero{isolation:isolate}
+.diya-strip{height:120px;margin:10px -18px;background:url(images/web/diya_border.jpg) center 38%/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);
+  animation:flicker 2.6s infinite}
+@keyframes flicker{0%,100%{filter:brightness(1)}30%{filter:brightness(1.18)}55%{filter:brightness(.93)}75%{filter:brightness(1.1)}}
+.photo-card{position:relative;border:3px solid var(--gold);border-radius:26px;overflow:hidden;box-shadow:0 0 50px rgba(240,195,90,.35)}
+.photo-card img{display:block;width:100%;transform:scale(1.1);transform-origin:30% 30%}
+.photo-card .cap{position:absolute;left:0;right:0;bottom:0;padding:80px 18px 22px;background:linear-gradient(transparent,rgba(60,15,3,.92))}
+.countbox{position:relative;margin-top:26px;padding:26px 10px 30px;border:2px solid var(--gold);border-radius:24px;overflow:hidden;
+  background:url(images/web/fireworks_sky.jpg) center/cover}
+.countbox::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(40,10,2,.35),rgba(40,10,2,.75))}
+.countbox>*{position:relative}
+.glimpse{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 4px 18px;margin:0 -18px;padding-left:18px;scrollbar-width:none}
+.glimpse::-webkit-scrollbar{display:none}
+.glimpse figure{flex:0 0 78%;scroll-snap-align:center;border:3px solid var(--gold);border-radius:22px;overflow:hidden;position:relative;aspect-ratio:9/14}
+.glimpse img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transform-origin:30% 30%}
+.glimpse figcaption{position:absolute;left:0;right:0;bottom:0;padding:50px 12px 14px;background:linear-gradient(transparent,rgba(60,15,3,.9));font-family:'Great Vibes',cursive;font-size:34px;color:var(--gold2)}
+.closing{position:relative;border-radius:26px;overflow:hidden;border:3px solid var(--gold);padding:0}
+.closing img{display:block;width:100%;transform:scale(1.1);transform-origin:30% 30%}
+.closing .txt{position:absolute;left:0;right:0;bottom:0;padding:120px 16px 26px;background:linear-gradient(transparent,rgba(50,12,2,.95) 45%)}
+/* ---------- LAYOUT ---------- */
+main{position:relative;z-index:2;max-width:560px;margin:0 auto;padding:0 18px 120px}
+section{padding:64px 0 24px;text-align:center}
+.frame{border:2px solid var(--gold);border-radius:22px;padding:30px 20px;position:relative;background:rgba(92,29,6,.35);
+  box-shadow:inset 0 0 0 6px rgba(230,179,74,.12),0 0 40px rgba(0,0,0,.3)}
+.rule{width:220px;height:2px;margin:18px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative}
+.rule::after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);color:var(--gold);font-size:16px;background:transparent}
+h2.title{font-family:'Great Vibes',cursive;font-weight:400;font-size:56px;color:var(--gold);line-height:1.1}
+.kick{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.3em;color:var(--gold2);text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s}
+.reveal.in{opacity:1;transform:none}
+.arch-img{width:100%;max-width:420px;margin:0 auto;border:5px solid var(--gold);border-radius:220px 220px 22px 22px;overflow:hidden;box-shadow:0 0 50px rgba(240,195,90,.35)}
+.arch-img img{width:100%;display:block;transform:scale(1.12);transform-origin:30% 30%;transition:transform 8s ease-out}
+.reveal.in .arch-img img{transform:scale(1.18)}
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            peacock: {
-              950: '#040e18',
-              900: '#081c2e',
-              800: '#0d2b45',
-              700: '#133e63',
-            },
-            gold: {
-              200: '#f7e7b4',
-              300: '#ebd07e',
-              400: '#d4af37',
-              500: '#b89124',
-              600: '#8f6e15',
-            },
-            ivory: '#fdfaf2',
-            lotus: '#e8a2b4',
-          },
-          fontFamily: {
-            display: ['Cinzel', 'serif'],
-            serif: ['Cormorant Garamond', 'serif'],
-            script: ['Great Vibes', 'cursive'],
-            sans: ['Montserrat', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:40px}
+.hero .shloka{font-size:15px;letter-spacing:.25em}
+.names{font-size:clamp(64px,19vw,96px);line-height:1}
+.weds{font-family:'Cinzel',serif;letter-spacing:.4em;font-size:14px;margin:6px 0;color:var(--gold2)}
+.scroll-hint{margin-top:26px;font-size:14px;opacity:.8;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
 
-  <style>
-    :root {
-      --peacock-deep: #081c2e;
-      --gold-rich: #d4af37;
-      --gold-light: #f7e7b4;
-      --ivory: #fdfaf2;
-    }
+/* family */
+.family p{margin:6px 0}
+.family .fam{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.3em;color:var(--gold2);margin-top:18px}
+.family b{color:var(--gold);font-weight:600;font-size:22px}
 
-    body {
-      background-color: #081c2e;
-      color: #fdfaf2;
-      font-family: 'Montserrat', sans-serif;
-      overflow-x: hidden;
-    }
+/* scratch */
+.scratch-wrap{position:relative;width:290px;height:170px;margin:20px auto 0;border-radius:18px;overflow:hidden;border:3px solid var(--gold);
+  background:linear-gradient(135deg,#fff3d6,#fde68a);color:var(--ink);box-shadow:0 0 30px rgba(240,195,90,.4)}
+.scratch-under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.scratch-under .d{font-family:'Cinzel',serif;font-size:30px;font-weight:700}
+.scratch-under .s{font-family:'Great Vibes',cursive;font-size:34px;color:#7a1228;line-height:1}
+#scratch{position:absolute;inset:0;touch-action:none;cursor:crosshair}
 
-    /* Gold foil shimmer text */
-    .gold-foil {
-      background: linear-gradient(
-        110deg,
-        #b89124 0%,
-        #f7e7b4 28%,
-        #d4af37 50%,
-        #fff4cf 72%,
-        #b89124 100%
-      );
-      background-size: 220% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmerGold 5.5s linear infinite;
-    }
+/* countdown */
+.count{display:flex;justify-content:center;gap:10px;margin-top:18px}
+.count div{width:74px;padding:12px 0;border:2px solid var(--gold);border-radius:14px;background:rgba(0,0,0,.25)}
+.count b{display:block;font-family:'Cinzel',serif;font-size:30px;color:var(--gold)}
+.count small{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold2)}
 
-    @keyframes shimmerGold {
-      0% { background-position: 0% center; }
-      100% { background-position: 220% center; }
-    }
+/* events */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:16px 0 4px}
+.chip{border:1.5px solid var(--gold);background:transparent;color:var(--gold2);border-radius:30px;padding:7px 14px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.12em;cursor:pointer}
+.chip.on{background:var(--gold);color:var(--ink)}
+.event{margin-top:34px;text-align:center}
+.event .card{border:2px solid var(--gold);border-radius:24px;overflow:hidden;background:rgba(92,29,6,.55);box-shadow:0 10px 40px rgba(0,0,0,.35);transform-style:preserve-3d;transition:transform .2s}
+.event .pic{position:relative;aspect-ratio:4/5;overflow:hidden}
+.event .pic img{width:100%;height:100%;object-fit:cover;transform:scale(1.14);transform-origin:30% 30%}
+.event .pic .badge{position:absolute;left:14px;top:14px;background:rgba(92,29,6,.75);border:1.5px solid var(--gold);border-radius:30px;padding:5px 14px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.15em;color:var(--gold2);backdrop-filter:blur(4px)}
+.event .body{padding:22px 18px 24px}
+.event h3{font-family:'Great Vibes',cursive;font-weight:400;font-size:50px;color:var(--gold);line-height:1.05}
+.event .time{font-family:'Cinzel',serif;font-size:26px;font-weight:700;margin-top:6px}
+.event .date{font-size:20px;color:var(--gold2)}
+.event .venue{font-size:22px;color:var(--gold);margin-top:8px;font-weight:600}
+.event .addr{font-size:17px;opacity:.9}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:none;cursor:pointer;text-decoration:none;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.12em;
+  padding:11px 18px;border-radius:40px;background:linear-gradient(90deg,#e6b34a,#fde68a,#e6b34a);color:var(--ink);box-shadow:0 4px 18px rgba(240,195,90,.35);font-weight:700}
+.btn.ghost{background:transparent;color:var(--gold2);border:1.5px solid var(--gold);box-shadow:none}
+.btn:disabled{opacity:.45;cursor:not-allowed}
 
-    /* Entrance Doors */
-    #entrance-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      display: flex;
-      pointer-events: auto;
-      transition: opacity 0.9s ease 0.8s, visibility 0.9s ease 0.8s;
-    }
+/* dress colour guide */
+.swatches{margin-top:12px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.swatches .grp{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.2em;color:var(--gold2)}
+.swatches .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px}
+.swatches .sw{display:flex;flex-direction:column;align-items:center;width:58px;font-size:12px;line-height:1.15;color:var(--cream)}
+.swatches .sw i{width:34px;height:34px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.4),inset 0 -3px 6px rgba(0,0,0,.15);margin-bottom:4px}
+/* map */
+.map{margin-top:18px;border:3px solid var(--gold);border-radius:20px;overflow:hidden;height:320px;background:#5c1d06}
+.map iframe{width:100%;height:100%;border:0;filter:saturate(.9)}
 
-    #entrance-overlay.opened {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+/* rsvp */
+form{text-align:left;margin-top:12px}
+label{display:block;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.15em;color:var(--gold2);margin:16px 0 6px}
+input,textarea,select{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid rgba(230,179,74,.6);background:rgba(255,243,214,.08);color:var(--cream);font:inherit;font-size:18px}
+input::placeholder,textarea::placeholder{color:rgba(255,243,214,.45)}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices label{margin:0;display:flex;align-items:center;gap:6px;border:1.5px solid var(--gold);border-radius:30px;padding:7px 12px;cursor:pointer;font-size:11px;color:var(--gold2)}
+.choices input{width:auto;accent-color:var(--gold)}
+.stepper{display:flex;align-items:center;gap:14px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;color:var(--gold);font-size:24px;cursor:pointer}
+.stepper b{font-family:'Cinzel',serif;font-size:28px;min-width:40px;text-align:center}
+.yn{display:flex;gap:10px}.yn .chip{flex:1;padding:12px}
 
-    .door-panel {
-      width: 50%;
-      height: 100%;
-      background: radial-gradient(circle at center, #0e304d 0%, #061422 85%);
-      border-color: rgba(212, 175, 55, 0.45);
-      transition: transform 1.25s cubic-bezier(0.77, 0, 0.175, 1);
-      position: relative;
-      overflow: hidden;
-    }
+/* hashtag + footer */
+.tag{display:inline-block;font-family:'Cinzel',serif;font-weight:700;font-size:19px;letter-spacing:.06em;color:var(--ink);background:linear-gradient(90deg,#e6b34a,#fde68a,#e6b34a);padding:11px 20px;border-radius:50px;box-shadow:0 0 34px rgba(240,195,90,.55);cursor:pointer;border:none}
+footer{text-align:center;padding:40px 0 30px;font-size:16px;opacity:.85}
 
-    .door-left {
-      border-right: 1px solid rgba(212, 175, 55, 0.5);
-    }
-
-    .door-right {
-      border-left: 1px solid rgba(212, 175, 55, 0.5);
-    }
-
-    #entrance-overlay.opened .door-left {
-      transform: translateX(-100%);
-    }
-
-    #entrance-overlay.opened .door-right {
-      transform: translateX(100%);
-    }
-
-    .door-center-seal {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: opacity 0.45s ease, transform 0.6s ease;
-    }
-
-    #entrance-overlay.opened .door-center-seal {
-      opacity: 0;
-      transform: scale(0.92);
-    }
-
-    /* Jharokha Arch Frame */
-    .jharokha-frame {
-      border-radius: 9999px 9999px 24px 24px;
-      border: 2px solid rgba(212, 175, 55, 0.7);
-      box-shadow:
-        0 0 0 6px rgba(8, 28, 46, 0.9),
-        0 0 0 7px rgba(212, 175, 55, 0.35),
-        0 24px 60px rgba(0, 0, 0, 0.55);
-    }
-
-    /* Glassmorphic Card */
-    .temple-card {
-      background: linear-gradient(160deg, rgba(13, 43, 69, 0.72) 0%, rgba(6, 20, 34, 0.88) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.32);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
-    }
-
-    /* Scroll Reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Soundwave bars */
-    .wave-bar {
-      width: 3px;
-      height: 12px;
-      background: linear-gradient(to top, #b89124, #f7e7b4);
-      border-radius: 999px;
-      transform-origin: bottom;
-      transition: height 0.25s ease;
-    }
-
-    .playing .wave-bar:nth-child(1) { animation: waveBounce 0.9s ease-in-out infinite 0.0s; }
-    .playing .wave-bar:nth-child(2) { animation: waveBounce 0.75s ease-in-out infinite 0.15s; }
-    .playing .wave-bar:nth-child(3) { animation: waveBounce 1.05s ease-in-out infinite 0.3s; }
-    .playing .wave-bar:nth-child(4) { animation: waveBounce 0.85s ease-in-out infinite 0.45s; }
-
-    @keyframes waveBounce {
-      0%, 100% { transform: scaleY(0.35); }
-      50% { transform: scaleY(1.25); }
-    }
-
-    /* Subtle patterned background */
-    .mandala-bg {
-      background-image:
-        radial-gradient(circle at 18% 12%, rgba(212, 175, 55, 0.12), transparent 36%),
-        radial-gradient(circle at 82% 24%, rgba(232, 162, 180, 0.09), transparent 38%),
-        radial-gradient(circle at 50% 80%, rgba(19, 62, 99, 0.4), transparent 55%);
-    }
-
-    /* Fallback art container */
-    .art-fallback {
-      background: radial-gradient(circle at 50% 35%, #16446b 0%, #081c2e 70%, #040e18 100%);
-    }
-  </style>
+/* floating controls */
+.fab{position:fixed;right:16px;z-index:20;width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);background:rgba(92,29,6,.8);color:var(--gold);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,.4)}
+#musicBtn{bottom:20px}
+#musicBtn.playing{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+nav.dock{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:19;display:flex;gap:4px;background:rgba(92,29,6,.85);border:1.5px solid var(--gold);border-radius:40px;padding:6px;backdrop-filter:blur(6px)}
+nav.dock a{text-decoration:none;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.1em;color:var(--gold2);padding:8px 10px;border-radius:30px}
+nav.dock a:active{background:var(--gold);color:var(--ink)}
+.toast{position:fixed;left:50%;top:20px;transform:translate(-50%,-120px);z-index:60;background:var(--gold);color:var(--ink);padding:10px 22px;border-radius:30px;font-family:'Cinzel',serif;font-size:13px;transition:transform .4s;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+.toast.show{transform:translate(-50%,0)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:55}
+</style>
 </head>
-<body class="mandala-bg selection:bg-gold-400/30 selection:text-gold-200">
+<body class="locked">
 
-  <!-- Top Scroll Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] z-50 bg-gradient-to-r from-gold-600 via-gold-200 to-gold-400" style="width: 0%;"></div>
+<!-- ======================= GATE ======================= -->
+<div id="gate">
+  <div class="gate-blur"></div><div class="gate-art"></div>
+  <div class="gate-palace" data-palace="gate"></div>
+  <div class="toran"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="door l"><div class="arch"></div><div class="mot" style="font-size:min(14vw,80px)">शुभ</div><div class="knob"></div></div>
+  <div class="door r"><div class="arch"></div><div class="mot" style="font-size:min(14vw,80px)">विवाह</div><div class="knob"></div></div>
+  <div class="ribbon"><i></i><i></i></div>
+  <div class="bow"><b></b><b></b><s></s><s></s></div>
+  <button class="seal" id="seal" aria-label="Open invitation"><b>U&amp;A</b><small>TAP TO OPEN</small></button>
+  <div class="gate-hint2"><span class="script">Jai Shri Ram</span></div>
+  <div class="gate-hint"><span class="script">You're invited</span><span id="guestLine">Tap the seal to cut the ribbon</span></div>
+</div>
 
-  <!-- Floating Particles Canvas -->
-  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+<div class="mahal-bottom" data-palace="bottom"></div>
+<canvas id="petals"></canvas>
+<canvas id="confetti"></canvas>
+<canvas id="fw"></canvas>
+<div class="toast" id="toast"></div>
+<audio id="music" src="music.mp3" loop preload="auto"></audio>
+<button class="fab" id="musicBtn" aria-label="Music">♫</button>
 
-  <!-- Dual-Mode Krishna Flute Audio -->
-  <audio id="krishnaFluteAudio" loop preload="auto" src="audio/krishna-flute.mp3"></audio>
+<main>
+  <!-- HERO -->
+  <section class="hero reveal" style="position:relative">
+    <div class="hero-bg"></div>
+    <div class="lanterns"><i class="lantern" style="height:70px"></i><i class="lantern" style="height:40px"></i><i class="lantern" style="height:40px"></i><i class="lantern" style="height:70px"></i></div>
+    <div data-palace="hero" style="margin-bottom:18px"></div>
+    <div class="kick shloka">|| श्री गणेशाय नमः ||</div>
+    <div data-chhatri></div><div class="arch-img" style="max-width:300px;margin-top:18px"><img src="images/web/ganesh.jpg" alt="Shri Ganesh"></div>
+    <p style="margin-top:16px;font-style:italic;font-size:17px">Vakratunda Mahakaya Suryakoti Samaprabha<br>Nirvighnam Kuru Me Deva Sarva-Karyeshu Sarvada</p>
+    <div class="rule"></div>
+    <div class="kick">Together with their families</div>
+    <div class="names script gold" style="margin-top:10px">Utkarsh</div>
+    <div class="weds">weds</div>
+    <div class="names script gold">Aparna</div>
+    <div class="scroll-hint">▼ scroll to explore ▼</div>
+  </section>
 
-  <!-- Entrance Double Doors Overlay -->
-  <div id="entrance-overlay" aria-label="Wedding Invitation Cover">
-    <div class="door-panel door-left"></div>
-    <div class="door-panel door-right"></div>
+  <!-- BLESSINGS / FAMILY -->
+  <section class="reveal family">
+    <div class="frame">
+      <div class="kick">|| Jai Siya Ram ||</div>
+      <div data-chhatri></div><div class="arch-img" style="max-width:280px;margin-top:16px"><img src="images/web/ram_darbar.jpg" alt="Shri Ram Darbar"></div>
+      <p class="script gold" style="font-size:36px;margin-top:10px">Siyavar Ramchandra Ki Jai</p>
+      <p style="margin-top:18px">With the divine blessings of</p>
+      <p><b>Late Shri Chandradev Mishra</b><br>&amp;<br><b>Smt. Indravati Mishra</b></p>
+      <div class="rule"></div>
+      <div class="fam">Mishra Family</div>
+      <p><b>Mr. Manoj Mishra &amp; Mrs. Pushpa Mishra</b></p>
+      <p style="font-size:16px;opacity:.9">request the pleasure of your company at the wedding of their son</p>
+      <p class="script gold" style="font-size:52px;line-height:1.1">Utkarsh</p>
+      <p style="font-size:16px;opacity:.9">with</p>
+      <p class="script gold" style="font-size:52px;line-height:1.1">Aparna</p>
+      <p style="font-size:16px;opacity:.9">daughter of</p>
+      <div class="fam" style="margin-top:6px">Dubey Family</div>
+      <p><b>Mr. Rajesh Dubey &amp; Mrs. Sheela Dubey</b></p>
+    </div>
+  </section>
 
-    <div class="door-center-seal px-5">
-      <div class="temple-card max-w-md w-full rounded-3xl p-8 sm:p-10 text-center border-gold-400/50 relative">
-        <p class="font-serif text-gold-300 text-lg tracking-[0.18em] mb-2">|| श्री गणेशाय नमः ||</p>
+  <div class="diya-strip reveal"></div>
 
-        <!-- Morpankh & Bansuri SVG Emblem -->
-        <div class="mx-auto my-4 w-20 h-20 rounded-full border border-gold-400/40 bg-peacock-950/60 flex items-center justify-center shadow-lg">
-          <svg viewBox="0 0 64 64" class="w-12 h-12 text-gold-300" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M12 46 L52 18" stroke-linecap="round" stroke-width="2.4" stroke="#ebd07e" />
-            <circle cx="24" cy="37.6" r="1.3" fill="#081c2e" />
-            <circle cx="30" cy="33.4" r="1.3" fill="#081c2e" />
-            <circle cx="36" cy="29.2" r="1.3" fill="#081c2e" />
-            <circle cx="42" cy="25" r="1.3" fill="#081c2e" />
-            <path d="M34 12 C42 10 50 17 48 26 C46 34 37 38 30 33 C25 29 26 15 34 12 Z" fill="rgba(19,62,99,0.55)" stroke="#d4af37" />
-            <ellipse cx="38" cy="21" rx="4.5" ry="6" fill="rgba(212,175,55,0.35)" stroke="#f7e7b4" />
-            <circle cx="38" cy="20" r="2.2" fill="#0d2b45" />
-          </svg>
-        </div>
+  <!-- RAM MANDIR -->
+  <section class="reveal" style="padding-top:30px">
+    <div class="photo-card"><img src="images/web/rammandir_couple.jpg" alt="Utkarsh and Aparna at Shri Ram Mandir" loading="lazy">
+      <div class="cap"><div class="kick">By the grace of Prabhu Shri Ram</div>
+      <p class="script gold" style="font-size:44px;line-height:1.1;margin-top:6px">Two souls, one sacred journey</p></div></div>
+  </section>
 
-        <p class="text-xs uppercase tracking-[0.28em] text-gold-200/80 mb-2">
-          Mishra &amp; Dubey Families Invite You
-        </p>
-
-        <h1 class="font-script text-5xl sm:text-6xl gold-foil leading-tight py-1">
-          Utkarsh &amp; Aparna
-        </h1>
-
-        <p class="font-serif italic text-ivory/85 text-lg mt-2 mb-6">
-          January 28–29, 2027 &bull; Kanpur
-        </p>
-
-        <button
-          id="open-invite-btn"
-          type="button"
-          class="group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-sm tracking-[0.16em] uppercase shadow-lg shadow-gold-500/20 hover:scale-[1.03] active:scale-[0.98] transition"
-        >
-          <span>Open Invitation</span>
-          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </button>
-
-        <p class="text-[11px] text-gold-200/60 mt-4 tracking-wider">
-          Tap to begin with serene Krishna Bansuri music
-        </p>
+  <!-- COUPLE + SCRATCH + COUNTDOWN -->
+  <section class="reveal" id="save">
+    <div data-chhatri></div><div class="arch-img"><img src="images/web/couple.jpg" alt="Utkarsh and Aparna"></div>
+    <h2 class="title" style="margin-top:20px">Save the Date</h2>
+    <div class="kick">Scratch the golden card</div>
+    <div class="scratch-wrap">
+      <div class="scratch-under"><span class="s">Shubh Vivah</span><span class="d" id="scratchDate">Coming Soon</span><span id="scratchSub" style="font-size:16px">Kesari Mangalam, Kanpur</span></div>
+      <canvas id="scratch" width="290" height="170"></canvas>
+    </div>
+    <div id="countWrap" class="countbox">
+      <div class="kick">Counting down to forever</div>
+      <div class="count" id="count">
+        <div><b id="cd-d">--</b><small>Days</small></div><div><b id="cd-h">--</b><small>Hours</small></div>
+        <div><b id="cd-m">--</b><small>Mins</small></div><div><b id="cd-s">--</b><small>Secs</small></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Floating Krishna Bansuri Controller Pill -->
-  <button
-    id="music-toggle-btn"
-    type="button"
-    aria-label="Toggle Krishna Bansuri Music"
-    class="fixed bottom-5 right-5 z-40 flex items-center gap-3 px-4 py-2.5 rounded-full temple-card border-gold-400/50 text-gold-200 hover:border-gold-300 transition shadow-xl"
-  >
-    <span class="w-7 h-7 rounded-full bg-gold-400/15 border border-gold-400/40 flex items-center justify-center">
-      <svg class="w-4 h-4 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path stroke-linecap="round" d="M4 18L20 6" />
-        <circle cx="9.5" cy="13.8" r="0.8" fill="currentColor" />
-        <circle cx="12.5" cy="11.6" r="0.8" fill="currentColor" />
-        <circle cx="15.5" cy="9.4" r="0.8" fill="currentColor" />
-      </svg>
-    </span>
-    <span class="text-xs font-medium tracking-wider uppercase hidden sm:inline">Krishna Bansuri</span>
-    <span id="soundwave" class="flex items-end gap-[3px] h-3.5">
-      <span class="wave-bar"></span>
-      <span class="wave-bar"></span>
-      <span class="wave-bar"></span>
-      <span class="wave-bar"></span>
-    </span>
-    <span id="music-status-label" class="text-[10px] uppercase tracking-widest text-gold-300/80">Play</span>
-  </button>
-
-  <!-- Main Content -->
-  <main class="relative z-10">
-
-    <!-- HERO SECTION -->
-    <section id="hero" class="min-h-screen flex items-center py-16 sm:py-24 px-5 sm:px-8">
-      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-
-        <!-- Left: Jharokha Hero Artwork -->
-        <div class="lg:col-span-5 flex justify-center reveal">
-          <div class="jharokha-frame relative w-full max-w-[400px] aspect-[4/5] overflow-hidden bg-peacock-950 group">
-            <img
-              id="art-hero"
-              src="images/hero.png"
-              data-alt-ext="images/hero.jpg"
-              data-caption="Eternal Melody by the Yamuna — Radha &amp; Krishna"
-              alt="Radha and Krishna under the Kadamba tree beside the Yamuna river"
-              class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-[1.03] cursor-pointer"
-              onclick="openLightbox(this)"
-              onerror="handleArtError(this, 'Eternal Melody by the Yamuna', 'Place hero.png or hero.jpg inside images/')"
-            />
-            <button
-              type="button"
-              onclick="openLightbox(document.getElementById('art-hero'))"
-              class="absolute top-4 right-4 p-2 rounded-full bg-peacock-950/75 border border-gold-400/40 text-gold-200 hover:bg-peacock-900 transition"
-              aria-label="View artwork fullscreen"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Right: Invitation Typography & Countdown -->
-        <div class="lg:col-span-7 text-center lg:text-left reveal">
-          <p class="font-serif text-gold-300 text-xl tracking-[0.18em] mb-2">|| श्री गणेशाय नमः ||</p>
-          <p class="text-xs sm:text-sm uppercase tracking-[0.3em] text-gold-200/80 mb-4">
-            With the Divine Blessings of Radha &amp; Krishna
-          </p>
-
-          <h1 class="font-script text-6xl sm:text-7xl lg:text-8xl gold-foil leading-tight py-2">
-            Utkarsh &amp; Aparna
-          </h1>
-
-          <p class="font-serif text-xl sm:text-2xl text-ivory/90 mt-3 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Together with our families, we joyfully invite you to bless and celebrate the beginning of our forever.
-          </p>
-
-          <div class="mt-6 inline-flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm text-gold-200">
-            <span class="px-4 py-1.5 rounded-full border border-gold-400/40 bg-peacock-900/60">
-              January 28–29, 2027
-            </span>
-            <span class="px-4 py-1.5 rounded-full border border-gold-400/40 bg-peacock-900/60">
-              Kanpur, Uttar Pradesh
-            </span>
-          </div>
-
-          <!-- Live Countdown -->
-          <div class="mt-8 grid grid-cols-4 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0">
-            <div class="temple-card rounded-2xl py-4 px-2 text-center">
-              <div id="cd-days" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
-              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Days</div>
-            </div>
-            <div class="temple-card rounded-2xl py-4 px-2 text-center">
-              <div id="cd-hours" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
-              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Hours</div>
-            </div>
-            <div class="temple-card rounded-2xl py-4 px-2 text-center">
-              <div id="cd-mins" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
-              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Mins</div>
-            </div>
-            <div class="temple-card rounded-2xl py-4 px-2 text-center">
-              <div id="cd-secs" class="font-display text-2xl sm:text-3xl font-bold text-gold-300">--</div>
-              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/70 mt-1">Secs</div>
-            </div>
-          </div>
-
-          <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a
-              href="#events"
-              class="px-7 py-3 rounded-full bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-xs sm:text-sm tracking-[0.16em] uppercase hover:scale-[1.02] transition"
-            >
-              Wedding Itinerary
-            </a>
-            <a
-              href="#rsvp"
-              class="px-7 py-3 rounded-full border border-gold-400/60 text-gold-200 font-display text-xs sm:text-sm tracking-[0.16em] uppercase hover:bg-gold-400/10 transition"
-            >
-              RSVP &amp; Blessings
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAMILIES / BRIDE & GROOM SECTION -->
-    <section id="families" class="py-16 sm:py-24 px-5 sm:px-8">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12 reveal">
-          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">With the Blessings of Our Families</p>
-          <h2 class="font-display text-3xl sm:text-4xl gold-foil">Bride &amp; Groom</h2>
-          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <!-- Groom Card -->
-          <div class="temple-card rounded-3xl p-8 text-center flex flex-col justify-center reveal">
-            <p class="text-xs uppercase tracking-[0.26em] text-gold-300/80 mb-2">The Groom</p>
-            <h3 class="font-script text-5xl gold-foil py-1">Utkarsh Mishra</h3>
-            <p class="font-serif italic text-ivory/80 text-lg mt-3">Son of</p>
-            <p class="font-display text-lg sm:text-xl text-gold-200 mt-1">
-              Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra
-            </p>
-            <p class="text-xs text-ivory/65 mt-3 tracking-wide">Kanpur, Uttar Pradesh</p>
-          </div>
-
-          <!-- Bride Card -->
-          <div class="temple-card rounded-3xl p-8 text-center flex flex-col justify-center reveal">
-            <p class="text-xs uppercase tracking-[0.26em] text-gold-300/80 mb-2">The Bride</p>
-            <h3 class="font-script text-5xl gold-foil py-1">Aparna Dubey</h3>
-            <p class="font-serif italic text-ivory/80 text-lg mt-3">Daughter of</p>
-            <p class="font-display text-lg sm:text-xl text-gold-200 mt-1">
-              Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey
-            </p>
-            <p class="text-xs text-ivory/65 mt-3 tracking-wide">Kanpur, Uttar Pradesh</p>
-          </div>
-        </div>
-
-        <blockquote class="mt-10 text-center font-serif italic text-xl sm:text-2xl text-gold-200/90 max-w-3xl mx-auto reveal">
-          “Where love is eternal as Radha’s devotion and serene as Krishna’s melody, two souls walk together in grace.”
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- WEDDING CELEBRATIONS / ITINERARY -->
-    <section id="events" class="py-16 sm:py-24 px-5 sm:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-14 reveal">
-          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">Two Days of Celebration</p>
-          <h2 class="font-display text-3xl sm:text-4xl gold-foil">Wedding Celebrations</h2>
-          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-          <!-- EVENT 1: HALDI -->
-          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
-            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
-              <img
-                id="art-haldi"
-                src="images/haldi.png"
-                data-alt-ext="images/haldi.jpg"
-                data-caption="Vrindavan Floral Jhoola — Haldi Ceremony"
-                alt="Radha and Krishna on a floral swing in Vrindavan"
-                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
-                onclick="openLightbox(this)"
-                onerror="handleArtError(this, 'Vrindavan Floral Jhoola', 'Place haldi.png or haldi.jpg inside images/')"
-              />
-              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
-                Day 1 &bull; Morning
-              </span>
-            </div>
-
-            <div class="p-6 sm:p-7 flex-1 flex flex-col">
-              <h3 class="font-display text-2xl text-gold-200">Haldi Ceremony</h3>
-              <p class="font-serif italic text-ivory/80 text-base mt-1">A sunlit morning of turmeric, marigolds, and joyful laughter</p>
-
-              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
-                <p><strong class="text-gold-300">Date:</strong> Thursday, January 28, 2027</p>
-                <p><strong class="text-gold-300">Time:</strong> 10:00 AM Onwards</p>
-                <p><strong class="text-gold-300">Venue:</strong> Kesari Mangalam Lawn, Kanpur</p>
-              </div>
-
-              <!-- Dress Code Swatches -->
-              <div class="mt-5 pt-4 border-t border-gold-400/20">
-                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-2">Dress Code: Pastel Shades</p>
-                <div class="flex flex-wrap items-center gap-2">
-                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Blush Pink" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#f6c8d1" title="Blush Pink"></button>
-                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Mint Green" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#bfe6d2" title="Mint Green"></button>
-                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Butter Yellow" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#fae7a5" title="Butter Yellow"></button>
-                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Powder Blue" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#beddf5" title="Powder Blue"></button>
-                  <button type="button" onclick="selectSwatch(this, 'haldi-swatch-label')" data-name="Lavender" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#d8c7f0" title="Lavender"></button>
-                  <span id="haldi-swatch-label" class="text-xs text-gold-200/80 ml-1">Tap a shade</span>
-                </div>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Kesari+Mangalam+Lawn+Kanpur"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
-                >
-                  Open Maps
-                </a>
-                <button
-                  type="button"
-                  onclick="downloadICS('Utkarsh & Aparna — Haldi Ceremony', '20270128T043000Z', '20270128T083000Z', 'Kesari Mangalam Lawn, Kanpur', 'Haldi Ceremony celebrating Utkarsh Mishra & Aparna Dubey. Dress Code: Pastel Shades.')"
-                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
-                >
-                  Add to Calendar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- EVENT 2: TILAK, BARIKSHA & SANGEET -->
-          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
-            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
-              <img
-                id="art-sangeet"
-                src="images/sangeet.png"
-                data-alt-ext="images/sangeet.jpg"
-                data-caption="Starlit Maharaas — Tilak, Bariksha &amp; Sangeet Night"
-                alt="Radha and Krishna dancing in a starlit Vrindavan Raas Leela"
-                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
-                onclick="openLightbox(this)"
-                onerror="handleArtError(this, 'Starlit Maharaas', 'Place sangeet.png or sangeet.jpg inside images/')"
-              />
-              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
-                Day 1 &bull; Evening
-              </span>
-            </div>
-
-            <div class="p-6 sm:p-7 flex-1 flex flex-col">
-              <h3 class="font-display text-2xl text-gold-200">Tilak, Bariksha &amp; Sangeet</h3>
-              <p class="font-serif italic text-ivory/80 text-base mt-1">An evening of sacred rituals, music, dance, and celebration</p>
-
-              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
-                <p><strong class="text-gold-300">Date:</strong> Thursday, January 28, 2027</p>
-                <p><strong class="text-gold-300">Time:</strong> 7:00 PM Onwards</p>
-                <p><strong class="text-gold-300">Venue:</strong> Exotica, Status Club Resort, Kanpur</p>
-              </div>
-
-              <!-- Dress Code Swatches -->
-              <div class="mt-5 pt-4 border-t border-gold-400/20">
-                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-2">Dress Code: Dark Indo-Western or Suits</p>
-                <div class="flex flex-wrap items-center gap-2">
-                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Midnight Navy" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#10223d" title="Midnight Navy"></button>
-                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Emerald Green" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#0d4d3a" title="Emerald Green"></button>
-                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Wine Maroon" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#5c1626" title="Wine Maroon"></button>
-                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Charcoal Black" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#23262b" title="Charcoal Black"></button>
-                  <button type="button" onclick="selectSwatch(this, 'sangeet-swatch-label')" data-name="Deep Plum" class="w-6 h-6 rounded-full border border-white/40 transition hover:scale-110" style="background:#3e1c47" title="Deep Plum"></button>
-                  <span id="sangeet-swatch-label" class="text-xs text-gold-200/80 ml-1">Tap a shade</span>
-                </div>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Exotica+Status+Club+Resort+Kanpur"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
-                >
-                  Open Maps
-                </a>
-                <button
-                  type="button"
-                  onclick="downloadICS('Utkarsh & Aparna — Tilak, Bariksha & Sangeet', '20270128T133000Z', '20270128T173000Z', 'Exotica, Status Club Resort, Kanpur', 'Tilak, Bariksha & Sangeet Night celebrating Utkarsh Mishra & Aparna Dubey. Dress Code: Dark Indo-Western or Suits.')"
-                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
-                >
-                  Add to Calendar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- EVENT 3: SHUBH VIVAH -->
-          <article class="temple-card rounded-3xl overflow-hidden flex flex-col reveal">
-            <div class="relative aspect-[16/10] bg-peacock-950 overflow-hidden group">
-              <img
-                id="art-vivah"
-                src="images/vivah.png"
-                data-alt-ext="images/vivah.jpg"
-                data-caption="The Divine Varmala — Shubh Vivah"
-                alt="Radha and Krishna exchanging garlands inside a golden temple pavilion"
-                class="w-full h-full object-cover object-[center_20%] transition duration-700 group-hover:scale-105 cursor-pointer"
-                onclick="openLightbox(this)"
-                onerror="handleArtError(this, 'The Divine Varmala', 'Place vivah.png or vivah.jpg inside images/')"
-              />
-              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-peacock-950/80 border border-gold-400/40 text-[11px] uppercase tracking-widest text-gold-200">
-                Day 2 &bull; Wedding
-              </span>
-            </div>
-
-            <div class="p-6 sm:p-7 flex-1 flex flex-col">
-              <h3 class="font-display text-2xl text-gold-200">Shubh Vivah</h3>
-              <p class="font-serif italic text-ivory/80 text-base mt-1">Sacred Varmala, Vedic Pheras, and heartfelt blessings</p>
-
-              <div class="mt-5 space-y-2.5 text-sm text-ivory/85">
-                <p><strong class="text-gold-300">Date:</strong> Friday, January 29, 2027</p>
-                <p><strong class="text-gold-300">Time:</strong> 7:00 PM Onwards</p>
-                <p><strong class="text-gold-300">Venue:</strong> Kesari Mangalam Lawn, Kanpur</p>
-              </div>
-
-              <div class="mt-5 pt-4 border-t border-gold-400/20">
-                <p class="text-xs uppercase tracking-widest text-gold-300/90 mb-1">Dress Code</p>
-                <p class="text-sm text-ivory/80">Traditional Indian Ethnic &amp; Festive Attire</p>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-gold-400/20 flex flex-wrap gap-2.5 mt-auto">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Kesari+Mangalam+Lawn+Kanpur"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 text-center px-3 py-2 rounded-xl border border-gold-400/45 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/15 transition"
-                >
-                  Open Maps
-                </a>
-                <button
-                  type="button"
-                  onclick="downloadICS('Utkarsh & Aparna — Shubh Vivah', '20270129T133000Z', '20270129T183000Z', 'Kesari Mangalam Lawn, Kanpur', 'Shubh Vivah of Utkarsh Mishra & Aparna Dubey.')"
-                  class="flex-1 text-center px-3 py-2 rounded-xl bg-gold-400/15 border border-gold-400/35 text-xs uppercase tracking-wider text-gold-200 hover:bg-gold-400/25 transition"
-                >
-                  Add to Calendar
-                </button>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- RSVP & BLESSINGS WALL -->
-    <section id="rsvp" class="py-16 sm:py-24 px-5 sm:px-8">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12 reveal">
-          <p class="text-xs uppercase tracking-[0.3em] text-gold-300/80 mb-2">Your Presence Is Our Greatest Gift</p>
-          <h2 class="font-display text-3xl sm:text-4xl gold-foil">RSVP &amp; Blessings Wall</h2>
-          <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <!-- Form -->
-          <form id="rsvp-form" class="lg:col-span-5 temple-card rounded-3xl p-7 space-y-4 reveal">
-            <div>
-              <label for="guest-name" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Your Name</label>
-              <input
-                id="guest-name"
-                type="text"
-                required
-                placeholder="e.g., Aarav Sharma"
-                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory placeholder-ivory/40 focus:outline-none focus:border-gold-300"
-              />
-            </div>
-
-            <div>
-              <label for="guest-attendance" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Attendance</label>
-              <select
-                id="guest-attendance"
-                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory focus:outline-none focus:border-gold-300"
-              >
-                <option value="Joyfully Attending">Joyfully Attending</option>
-                <option value="Attending Shubh Vivah">Attending Shubh Vivah</option>
-                <option value="Sending Warm Wishes">Sending Warm Wishes from Afar</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="guest-message" class="block text-xs uppercase tracking-widest text-gold-300 mb-1.5">Your Blessings</label>
-              <textarea
-                id="guest-message"
-                rows="3"
-                required
-                placeholder="Write your heartfelt wishes for Utkarsh &amp; Aparna..."
-                class="w-full px-4 py-2.5 rounded-xl bg-peacock-950/70 border border-gold-400/35 text-ivory placeholder-ivory/40 focus:outline-none focus:border-gold-300 resize-none"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full py-3 rounded-xl bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 text-peacock-950 font-display font-semibold text-xs uppercase tracking-[0.18em] hover:scale-[1.01] active:scale-[0.99] transition"
-            >
-              Send Blessings
-            </button>
-          </form>
-
-          <!-- Blessings Wall -->
-          <div class="lg:col-span-7 temple-card rounded-3xl p-7 flex flex-col reveal">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="font-display text-xl text-gold-200">Heartfelt Wishes</h3>
-              <span id="wishes-count" class="text-xs text-gold-300/80 uppercase tracking-widest"></span>
-            </div>
-            <div id="blessings-list" class="space-y-3.5 max-h-[360px] overflow-y-auto pr-1"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER & WHATSAPP SHARE -->
-    <footer class="py-14 px-5 border-t border-gold-400/20 text-center">
-      <div class="max-w-3xl mx-auto">
-        <p class="font-serif text-gold-300 text-xl">|| राधे कृष्ण ||</p>
-        <h2 class="font-script text-5xl gold-foil my-2">Utkarsh &amp; Aparna</h2>
-        <p class="text-sm text-ivory/75 max-w-xl mx-auto leading-relaxed">
-          Warm regards from <strong class="text-gold-200">Mrs. Pushpa Mishra &amp; Mr. Manoj Mishra</strong> and <strong class="text-gold-200">Mrs. Sheela Dubey &amp; Mr. Rajesh Dubey</strong> along with all family members.
-        </p>
-
-        <div class="mt-6 flex justify-center">
-          <a
-            id="whatsapp-share-btn"
-            href="https://wa.me/?text=With%20the%20blessings%20of%20Mrs.%20Pushpa%20Mishra%20%26%20Mr.%20Manoj%20Mishra%20and%20Mrs.%20Sheela%20Dubey%20%26%20Mr.%20Rajesh%20Dubey%2C%20you%20are%20cordially%20invited%20to%20celebrate%20the%20wedding%20of%20Utkarsh%20%26%20Aparna%20in%20Kanpur%20on%20January%2028%E2%80%9329%2C%202027.%20View%20the%20invitation%3A%20https%3A%2F%2Fulshell.github.io%2Futkarsh-aparna%2F"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-gold-400/50 bg-peacock-900/70 text-gold-200 text-xs uppercase tracking-[0.18em] hover:bg-gold-400/15 transition"
-          >
-            <span>Share on WhatsApp</span>
-          </a>
-        </div>
-
-        <p class="text-[11px] text-ivory/45 mt-8 tracking-wider">
-          January 28–29, 2027 &bull; Kanpur, Uttar Pradesh
-        </p>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Fullscreen Lightbox Modal -->
-  <div id="lightbox" class="fixed inset-0 z-50 bg-peacock-950/95 hidden items-center justify-center p-4 sm:p-8" onclick="closeLightbox(event)">
-    <div class="relative max-w-4xl w-full flex flex-col items-center">
-      <button
-        type="button"
-        onclick="closeLightbox()"
-        class="self-end mb-3 px-4 py-1.5 rounded-full border border-gold-400/50 text-gold-200 text-xs uppercase tracking-widest hover:bg-gold-400/15"
-      >
-        Close &times;
-      </button>
-      <img id="lightbox-img" src="" alt="" class="max-h-[78vh] w-auto rounded-2xl border border-gold-400/40 shadow-2xl object-contain" />
-      <p id="lightbox-caption" class="font-serif italic text-gold-200 text-lg mt-3 text-center"></p>
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="reveal">
+      <div data-palace="small" style="max-width:300px;margin:0 auto 10px"></div>
+      <div class="kick">The Celebrations</div>
+      <h2 class="title">Wedding Festivities</h2>
+      <div class="rule"></div>
     </div>
-  </div>
+    <div id="eventList"></div>
+  </section>
 
-  <script>
-    /* =========================================================
-       1. SMART IMAGE FALLBACK (.png -> .jpg -> Ornate Placeholder)
-    ========================================================= */
-    function handleArtError(img, title, hint) {
-      if (!img.dataset.triedAlt && img.dataset.altExt) {
-        img.dataset.triedAlt = '1';
-        img.src = img.dataset.altExt;
-        return;
-      }
-      const wrapper = img.parentElement;
-      img.style.display = 'none';
-      const fallback = document.createElement('div');
-      fallback.className = 'art-fallback w-full h-full flex flex-col items-center justify-center p-6 text-center';
-      fallback.innerHTML = `
-        <p class="font-serif text-gold-300 text-lg tracking-widest mb-1">|| राधे कृष्ण ||</p>
-        <p class="font-display text-gold-200 text-base">${title}</p>
-        <p class="text-xs text-ivory/60 mt-2">${hint}</p>
-      `;
-      wrapper.appendChild(fallback);
-    }
+  <div class="diya-strip reveal"></div>
+  <section class="reveal" style="padding-top:30px">
+    <div class="kick">Glimpses of the celebration</div>
+    <h2 class="title">Shubh Utsav</h2>
+    <div class="glimpse">
+      <figure><img src="images/web/baraat.jpg" alt="Baraat" loading="lazy"><figcaption>The Baraat</figcaption></figure>
+      <figure><img src="images/web/ayodhya_ghat.jpg" alt="Deepotsav" loading="lazy"><figcaption>A Night of Diyas</figcaption></figure>
+      <figure><img src="images/web/couple_fireworks.jpg" alt="Celebration" loading="lazy"><figcaption>Sparkles &amp; Smiles</figcaption></figure>
+      <figure><img src="images/web/bg_gate.jpg" alt="Shri Ram Mandir" loading="lazy"><figcaption>Jai Shri Ram</figcaption></figure>
+    </div>
+    <p style="font-size:14px;opacity:.75">swipe ⟷</p>
+  </section>
 
-    /* =========================================================
-       2. ENTRANCE DOORS & DUAL-MODE KRISHNA BANSURI AUDIO
-    ========================================================= */
-    const overlay = document.getElementById('entrance-overlay');
-    const openBtn = document.getElementById('open-invite-btn');
-    const musicBtn = document.getElementById('music-toggle-btn');
-    const soundwave = document.getElementById('soundwave');
-    const musicStatus = document.getElementById('music-status-label');
-    const mp3Audio = document.getElementById('krishnaFluteAudio');
+  <!-- VENUES / MAP -->
+  <section id="venue" class="reveal">
+    <div class="kick">How to reach</div>
+    <h2 class="title">The Venues</h2>
+    <div class="tabs" id="venueTabs"></div>
+    <div id="venueInfo" style="margin-top:10px"></div>
+    <div class="map"><iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Venue map"></iframe></div>
+    <div class="btns"><a class="btn" id="dirBtn" target="_blank" rel="noopener">➤ Get Directions</a></div>
+  </section>
 
-    let isPlaying = false;
-    let usingSynth = false;
-    let audioCtx = null;
-    let masterGain = null;
-    let synthTimer = null;
-    let tanpuraNodes = [];
-    let mp3Available = null;
-
-    function updateMusicUI(playing) {
-      isPlaying = playing;
-      if (playing) {
-        soundwave.classList.add('playing');
-        musicStatus.textContent = 'Pause';
-      } else {
-        soundwave.classList.remove('playing');
-        musicStatus.textContent = 'Play';
-      }
-    }
-
-    // Expressive Raag Bhupali / Yaman Krishna Bansuri & Tanpura Web Audio Synthesizer
-    function startBansuriSynth() {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (!audioCtx) {
-        audioCtx = new AudioContext();
-        masterGain = audioCtx.createGain();
-        masterGain.gain.value = 0.001;
-        masterGain.connect(audioCtx.destination);
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      usingSynth = true;
-      const now = audioCtx.currentTime;
-      masterGain.gain.cancelScheduledValues(now);
-      masterGain.gain.setValueAtTime(Math.max(masterGain.gain.value, 0.001), now);
-      masterGain.gain.exponentialRampToValueAtTime(0.32, now + 1.2);
-
-      // Gentle Sa-Pa-Sa Tanpura Drone (D3, A3, D4)
-      stopTanpura();
-      [146.83, 220.0, 293.66].forEach((freq, idx) => {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        const filter = audioCtx.createBiquadFilter();
-        osc.type = idx === 1 ? 'triangle' : 'sine';
-        osc.frequency.value = freq;
-        filter.type = 'lowpass';
-        filter.frequency.value = 520;
-        gain.gain.value = idx === 0 ? 0.075 : 0.04;
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(masterGain);
-        osc.start();
-        tanpuraNodes.push(osc);
-      });
-
-      // Raag Bhupali melody phrases in D major pentatonic (D, E, F#, A, B, D5, E5)
-      const notes = [
-        { f: 587.33, d: 1.4 }, { f: 659.25, d: 1.1 }, { f: 739.99, d: 1.8 }, { f: 880.00, d: 2.0 },
-        { f: 739.99, d: 1.0 }, { f: 659.25, d: 1.2 }, { f: 587.33, d: 2.2 }, { f: 0, d: 0.7 },
-        { f: 739.99, d: 1.2 }, { f: 880.00, d: 1.3 }, { f: 987.77, d: 1.6 }, { f: 1174.66, d: 2.2 },
-        { f: 987.77, d: 1.1 }, { f: 880.00, d: 1.4 }, { f: 739.99, d: 1.6 }, { f: 587.33, d: 2.4 },
-        { f: 0, d: 0.9 }
-      ];
-      let step = 0;
-
-      function playNextNote() {
-        if (!isPlaying || !usingSynth) return;
-        const item = notes[step % notes.length];
-        step++;
-
-        if (item.f > 0) {
-          const t0 = audioCtx.currentTime;
-          const osc1 = audioCtx.createOscillator();
-          const osc2 = audioCtx.createOscillator();
-          const vib = audioCtx.createOscillator();
-          const vibGain = audioCtx.createGain();
-          const noteGain = audioCtx.createGain();
-          const lp = audioCtx.createBiquadFilter();
-
-          osc1.type = 'sine';
-          osc2.type = 'triangle';
-          osc1.frequency.setValueAtTime(item.f * 0.985, t0);
-          osc1.frequency.exponentialRampToValueAtTime(item.f, t0 + 0.14);
-          osc2.frequency.setValueAtTime(item.f * 2, t0);
-
-          vib.frequency.value = 5.1;
-          vibGain.gain.setValueAtTime(0, t0);
-          vibGain.gain.linearRampToValueAtTime(4.5, t0 + 0.45);
-          vib.connect(vibGain);
-          vibGain.connect(osc1.frequency);
-
-          lp.type = 'lowpass';
-          lp.frequency.value = 1850;
-
-          const harmGain = audioCtx.createGain();
-          harmGain.gain.value = 0.08;
-
-          noteGain.gain.setValueAtTime(0.0001, t0);
-          noteGain.gain.exponentialRampToValueAtTime(0.24, t0 + 0.18);
-          noteGain.gain.setValueAtTime(0.21, t0 + item.d * 0.72);
-          noteGain.gain.exponentialRampToValueAtTime(0.0001, t0 + item.d + 0.18);
-
-          osc1.connect(lp);
-          osc2.connect(harmGain);
-          harmGain.connect(lp);
-          lp.connect(noteGain);
-          noteGain.connect(masterGain);
-
-          osc1.start(t0);
-          osc2.start(t0);
-          vib.start(t0);
-          osc1.stop(t0 + item.d + 0.22);
-          osc2.stop(t0 + item.d + 0.22);
-          vib.stop(t0 + item.d + 0.22);
-        }
-
-        synthTimer = setTimeout(playNextNote, item.d * 980);
-      }
-
-      playNextNote();
-    }
-
-    function stopTanpura() {
-      tanpuraNodes.forEach(n => { try { n.stop(); } catch (e) {} });
-      tanpuraNodes = [];
-    }
-
-    function stopBansuriSynth() {
-      usingSynth = false;
-      clearTimeout(synthTimer);
-      stopTanpura();
-      if (audioCtx && masterGain) {
-        const now = audioCtx.currentTime;
-        masterGain.gain.cancelScheduledValues(now);
-        masterGain.gain.setValueAtTime(Math.max(masterGain.gain.value, 0.001), now);
-        masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
-      }
-    }
-
-    async function startMusic() {
-      updateMusicUI(true);
-      if (mp3Available !== false) {
-        try {
-          mp3Audio.volume = 0.55;
-          await mp3Audio.play();
-          mp3Available = true;
-          return;
-        } catch (err) {
-          mp3Available = false;
-        }
-      }
-      startBansuriSynth();
-    }
-
-    function pauseMusic() {
-      updateMusicUI(false);
-      mp3Audio.pause();
-      stopBansuriSynth();
-    }
-
-    openBtn.addEventListener('click', () => {
-      overlay.classList.add('opened');
-      startMusic();
-    });
-
-    musicBtn.addEventListener('click', () => {
-      if (isPlaying) pauseMusic();
-      else startMusic();
-    });
-
-    /* =========================================================
-       3. LIVE COUNTDOWN (Jan 29, 2027 7:00 PM IST)
-    ========================================================= */
-    const targetDate = new Date('2027-01-29T19:00:00+05:30').getTime();
-
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = Math.max(0, targetDate - now);
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const m = Math.floor((diff / (1000 * 60)) % 60);
-      const s = Math.floor((diff / 1000) % 60);
-
-      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
-      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
-      document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
-      document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    /* =========================================================
-       4. INTERACTIVE DRESS CODE SWATCHES
-    ========================================================= */
-    function selectSwatch(btn, labelId) {
-      const label = document.getElementById(labelId);
-      if (label) label.textContent = btn.dataset.name;
-    }
-
-    /* =========================================================
-       5. .ICS CALENDAR EXPORT
-    ========================================================= */
-    function downloadICS(title, startUTC, endUTC, location, description) {
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//Utkarsh & Aparna Wedding//EN',
-        'BEGIN:VEVENT',
-        `DTSTART:${startUTC}`,
-        `DTEND:${endUTC}`,
-        `SUMMARY:${title}`,
-        `LOCATION:${location}`,
-        `DESCRIPTION:${description}`,
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-
-      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.ics`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-
-    /* =========================================================
-       6. LIGHTBOX
-    ========================================================= */
-    function openLightbox(imgEl) {
-      if (!imgEl || imgEl.style.display === 'none') return;
-      const modal = document.getElementById('lightbox');
-      document.getElementById('lightbox-img').src = imgEl.src;
-      document.getElementById('lightbox-caption').textContent = imgEl.dataset.caption || imgEl.alt;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeLightbox(e) {
-      if (e && e.target.id !== 'lightbox') return;
-      const modal = document.getElementById('lightbox');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    /* =========================================================
-       7. RSVP & LOCALSTORAGE BLESSINGS WALL
-    ========================================================= */
-    const STORAGE_KEY = 'utkarsh_aparna_blessings_v1';
-    const defaultWishes = [
-      {
-        name: 'Mishra & Dubey Families',
-        attendance: 'Joyfully Attending',
-        message: 'May Lord Krishna and Radha shower endless love, peace, and prosperity upon Utkarsh and Aparna.'
-      }
-    ];
-
-    function loadWishes() {
-      try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-        return Array.isArray(saved) && saved.length ? saved : defaultWishes;
-      } catch {
-        return defaultWishes;
-      }
-    }
-
-    function renderWishes() {
-      const wishes = loadWishes();
-      const list = document.getElementById('blessings-list');
-      const count = document.getElementById('wishes-count');
-      count.textContent = `${wishes.length} ${wishes.length === 1 ? 'Wish' : 'Wishes'}`;
-
-      list.innerHTML = wishes.map(w => `
-        <div class="rounded-2xl bg-peacock-950/60 border border-gold-400/25 p-4">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-            <span class="font-display text-sm text-gold-200">${escapeHtml(w.name)}</span>
-            <span class="text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-gold-400/15 text-gold-300">${escapeHtml(w.attendance)}</span>
-          </div>
-          <p class="font-serif text-base text-ivory/85 leading-relaxed">${escapeHtml(w.message)}</p>
+  <!-- RSVP -->
+  <section id="rsvp" class="reveal">
+    <div class="frame">
+      <div class="kick">Kindly respond</div>
+      <h2 class="title">RSVP</h2>
+      <form id="rsvpForm">
+        <label for="rName">Your Name</label>
+        <input id="rName" required placeholder="e.g. Sharma Family">
+        <label>Will you join us?</label>
+        <div class="yn"><button type="button" class="chip on" data-yn="yes">Joyfully Yes</button><button type="button" class="chip" data-yn="no">Regretfully No</button></div>
+        <div id="yesPart">
+          <label>Number of Guests</label>
+          <div class="stepper"><button type="button" id="gMinus">−</button><b id="gCount">2</b><button type="button" id="gPlus">+</button></div>
+          <label>Events you'll attend</label>
+          <div class="choices" id="rEvents"></div>
         </div>
-      `).join('');
-    }
+        <label for="rMsg">Blessings for the couple</label>
+        <textarea id="rMsg" rows="3" placeholder="Write your wishes…"></textarea>
+        <div class="btns" style="margin-top:22px"><button class="btn" type="submit">✉ Send RSVP on WhatsApp</button></div>
+      </form>
+    </div>
+  </section>
 
-    function escapeHtml(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-    }
+  <!-- HASHTAG -->
+  <section class="reveal">
+    <div class="kick">Share your moments with</div>
+    <div style="margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="tag" data-tag="#Utkarna" style="font-size:26px;padding:12px 34px">#Utkarna</button></div>
+    <p style="margin-top:10px;font-size:15px;opacity:.8">tap to copy</p>
+    <div class="closing" id="closing" style="margin-top:26px"><img src="images/web/couple_fireworks.jpg" alt="Utkarsh and Aparna" loading="lazy">
+      <div class="txt">
+        <p class="script gold" style="font-size:42px;line-height:1.15">Your presence will make<br>our day truly special</p>
+        <p style="margin-top:10px">With love,<br><b class="gold">The Mishra &amp; Dubey Families</b></p>
+        <p class="script" style="font-size:32px;color:#ffb3c1;margin-top:8px">♥ Tenu leke jaunga ♥</p>
+      </div></div>
+    <div class="btns" style="margin-top:18px"><button class="btn" id="fwBtn">🎆 Celebrate!</button><button class="btn ghost" id="waShare">📲 Share on WhatsApp</button></div>
+  </section>
 
-    document.getElementById('rsvp-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('guest-name').value.trim();
-      const attendance = document.getElementById('guest-attendance').value;
-      const message = document.getElementById('guest-message').value.trim();
-      if (!name || !message) return;
+  <footer>Utkarsh &amp; Aparna · Kanpur</footer>
+</main>
 
-      const wishes = loadWishes();
-      wishes.unshift({ name, attendance, message });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(wishes));
-      renderWishes();
-      e.target.reset();
-      burstConfetti();
-    });
-    renderWishes();
+<nav class="dock"><a href="#save">Date</a><a href="#events">Events</a><a href="#venue">Map</a><a href="#rsvp">RSVP</a></nav>
 
-    /* =========================================================
-       8. SCROLL PROGRESS, REVEAL & FLOATING STARDUST CANVAS
-    ========================================================= */
-    window.addEventListener('scroll', () => {
-      const doc = document.documentElement;
-      const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
-      document.getElementById('scroll-progress').style.width = `${Math.min(100, Math.max(0, pct))}%`;
-    });
+<script>
+/* ===================== CONFIG — edit here ===================== */
+const CONFIG = {
+  // Fill dates as "YYYY-MM-DD". Leave null until known — the page adapts.
+  dates: { haldi:"2027-01-28", tilak:"2027-01-28", godh:"2027-01-28", sangeet:"2027-01-28", wedding:"2027-01-29" },
+  // WhatsApp number to receive RSVPs, with country code, digits only, e.g. "919876543210".
+  // null = guest picks a contact in WhatsApp.
+  rsvpPhone: null,
+  hashtag: "#Utkarna",
+};
+const VENUES = {
+  lawn:  {name:"Exotica Lawn", addr:"Status Club, Kanpur Gate No. 2", q:"Status Club Kanpur"},
+  kesari:{name:"Kesari Mangalam", addr:"Damodar Nagar, Kanpur", q:"Kesari Mangalam Damodar Nagar Kanpur"},
+};
+const EVENTS = [
+  {k:"haldi",   theme:"Haldi Mela",              title:"Haldi",                    time:"10:00 AM", hm:[10,0],  v:"kesari", img:"haldi",   dress:"Dress code: Any pastel colours",
+    pal:[["Pastels",[["Blush Pink","#f8c8dc","🩷"],["Lemon","#fff3b0","💛"],["Baby Blue","#bde0fe","🩵"],["Lavender","#cdb4db","💜"],["Mint","#b9fbc0","💚"],["Peach","#ffd6a5","🧡"]]]]},
+  {k:"tilak",   theme:"Baat Pakki",              title:"Tilak & Bariksha",         time:"6:00 PM",  hm:[18,0],  v:"lawn",   img:"tilak",   dress:""},
+  {k:"godh",    theme:"Shagan Di Shaam",         title:"Godh Bharai",              time:"7:00 PM",  hm:[19,0],  v:"lawn",   img:"godh",    dress:""},
+  {k:"sangeet", theme:"Sealed With a Ring",      title:"Ring Ceremony & Sangeet",  time:"9:00 PM",  hm:[21,0],  v:"lawn",   img:"sangeet", dress:"Dress code: Men – dark suits / Indo-western · Women – shimmery silver or golden sarees, gowns or lehengas",
+    pal:[["Men",[["Black","#0b0b0b","🖤"],["Midnight Navy","#14213d","💙"],["Charcoal","#36454f","🩶"],["Deep Wine","#4a0e1c","🍷"]]],
+         ["Women",[["Silver","linear-gradient(135deg,#8e8e8e,#f4f4f4 45%,#a9a9a9 60%,#ffffff)","🤍"],["Gold","linear-gradient(135deg,#a8701a,#ffe8a3 45%,#d4a017 60%,#fff3c2)","💛"],["Champagne","linear-gradient(135deg,#c9b28a,#f7e7ce 50%,#d8c3a0)","🥂"],["Rose Gold","linear-gradient(135deg,#b76e79,#f7d0c4 50%,#c98c87)","🩷"]]]]},
+  {k:"wedding", theme:"The Beginning of Forever",title:"Wedding",                  time:"7:00 PM",  hm:[19,0],  v:"kesari", img:"wedding", dress:"Dress code: Any – come as you like!"},
+];
+/* ?v=2 → only Tilak, Godh Bharai, Sangeet.  ?to=Name → personalised greeting */
+/* ============================================================== */
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const Q=new URLSearchParams(location.search);
+const LIST = Q.get('v')==='2' ? EVENTS.filter(e=>['tilak','godh','sangeet'].includes(e.k)) : EVENTS;
+const $=id=>document.getElementById(id);
+const fmtDate=d=>d?new Date(d+'T00:00').toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'';
+const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)};
+if(Q.get('to')) $('guestLine').textContent=`Dear ${Q.get('to')}, tap the seal to open`;
 
-    // Particle Canvas
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
+/* ---------- royal mahal artwork ---------- */
+/* Nagara-style temple (Ram Mandir) silhouette: curved shikhara spires, pyramidal mandapa roofs, saffron dhwaja */
+function shikhara(cx,base,w,h,win,flag){
+  const t=base-h;
+  let s=`<path d="M${cx-w/2} ${base}C${cx-w*.52} ${base-h*.45} ${cx-w*.3} ${base-h*.88} ${cx-w*.1} ${t}H${cx+w*.1}C${cx+w*.3} ${base-h*.88} ${cx+w*.52} ${base-h*.45} ${cx+w/2} ${base}Z"/>`;
+  s+=`<ellipse cx="${cx}" cy="${t-2.5}" rx="${w*.2}" ry="3"/><path d="M${cx-3} ${t-5}Q${cx} ${t-13} ${cx+3} ${t-5}Z"/>`;
+  if(flag)s+=`<rect x="${cx-.8}" y="${t-30}" width="1.6" height="22"/><path d="M${cx+.8} ${t-30}L${cx+16} ${t-25}L${cx+.8} ${t-19}Z" fill="#f97316"/>`;
+  // carved horizontal bands
+  let b='';for(let k=1;k<5;k++){const y=base-h*k/5,hw=(w/2)*(1-.75*Math.pow(k/5,1.5));b+=`<path d="M${cx-hw} ${y}H${cx+hw}" stroke="${win}" stroke-width="1.2"/>`}
+  b+=`<path d="M${cx} ${base}V${t+4}" stroke="${win}" stroke-width="1"/>`;
+  return s+b}
+function mandapa(cx,base,w,h){let s='';const n=4;for(let i=0;i<n;i++){const ww=w*(1-i*.22),hh=h/n;s+=`<path d="M${cx-ww/2} ${base-i*hh}L${cx-ww/2+hh*.8} ${base-(i+1)*hh}H${cx+ww/2-hh*.8}L${cx+ww/2} ${base-i*hh}Z"/>`}
+  return s+`<path d="M${cx-3} ${base-h}Q${cx} ${base-h-9} ${cx+3} ${base-h}Z"/>`}
+function palaceSVG(id,fillTop,fillBot,win){
+  const arches=(x0,y,n,w,h)=>{let a='';for(let i=0;i<n;i++){const x=x0+i*w*1.6;a+=`<path d="M${x} ${y+h}V${y+h*.45}Q${x} ${y} ${x+w/2} ${y-h*.1}Q${x+w} ${y} ${x+w} ${y+h*.45}V${y+h}Z" fill="${win}"/>`}return a};
+  return `<svg viewBox="0 -26 400 166" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${fillTop}"/><stop offset="1" stop-color="${fillBot}"/></linearGradient></defs>
+  <g fill="url(#${id}g)">
+   <rect x="0" y="130" width="400" height="10"/><rect x="14" y="124" width="372" height="7"/>
+   <rect x="28" y="100" width="34" height="24"/>${shikhara(45,100,32,34,win,true)}
+   <rect x="338" y="100" width="34" height="24"/>${shikhara(355,100,32,34,win,true)}
+   <rect x="70" y="98" width="80" height="26"/><rect x="66" y="94" width="88" height="5"/>${mandapa(110,94,84,28)}
+   <rect x="250" y="98" width="80" height="26"/><rect x="246" y="94" width="88" height="5"/>${mandapa(290,94,84,28)}
+   <rect x="140" y="84" width="120" height="40"/><rect x="134" y="80" width="132" height="5"/>
+   ${shikhara(162,80,30,46,win,false)}${shikhara(238,80,30,46,win,false)}
+   ${shikhara(200,80,66,78,win,true)}
+  </g>
+  ${arches(149,92,5,14,24)}${arches(79,104,4,10,16)}${arches(259,104,4,10,16)}${arches(36,108,2,8,12)}${arches(346,108,2,8,12)}
+  <path d="M188 124V108Q188 98 200 95Q212 98 212 108V124Z" fill="${win}"/>
+  </svg>`}
+const PAL={gate:palaceSVG('pg','#ffe8a3','#c2410c','rgba(124,45,18,.75)'),hero:palaceSVG('ph','#ffe8a3','#f6c453','rgba(124,45,18,.55)'),
+  small:palaceSVG('ps','#ffe8a3','#f6c453','rgba(124,45,18,.55)'),bottom:palaceSVG('pb','#ffe8a3','#f97316','rgba(92,29,6,.6)')};
+document.querySelectorAll('[data-palace]').forEach(el=>{el.innerHTML=PAL[el.dataset.palace];el.firstElementChild.classList.add('palace')});
+const CHH=`<svg class="chhatri" viewBox="0 -22 150 82"><g fill="#f6c453">${shikhara(75,48,32,40,'rgba(124,45,18,.55)',true)}${shikhara(28,52,20,20,'rgba(124,45,18,.55)',false)}${shikhara(122,52,20,20,'rgba(124,45,18,.55)',false)}
+  <rect x="40" y="46" width="70" height="5" rx="1"/><rect x="0" y="51" width="150" height="7" rx="3"/></g>
+  <path d="M68 51V44Q68 39 75 37Q82 39 82 44V51Z" fill="#7c2d12" opacity=".6"/></svg>`;
+document.querySelectorAll('[data-chhatri]').forEach(el=>el.outerHTML=CHH);
 
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
+/* ---------- gate ---------- */
+const music=$('music');let musicOK=true;
+music.addEventListener('error',()=>{musicOK=false;$('musicBtn').style.display='none'});
+function playMusic(){if(!musicOK)return;music.volume=.6;music.play().then(()=>$('musicBtn').classList.add('playing')).catch(()=>{})}
+let gateOpened=false;
+function openGate(){
+  if(gateOpened)return;gateOpened=true;
+  const g=$('gate');g.classList.add('cut');playMusic();
+  if(navigator.vibrate)navigator.vibrate(40);
+  setTimeout(()=>g.classList.add('open'),700);
+  setTimeout(()=>{burst(innerWidth/2,innerHeight/2,140);document.body.classList.remove('locked')},1500);
+  setTimeout(()=>{show(9,2200)},900);
+  setTimeout(()=>g.classList.add('gone'),4600);
+}
+// tap anywhere on the gate — seal, ribbon, bow or doors — to open
+$('gate').addEventListener('click',openGate);
+$('musicBtn').onclick=()=>{if(music.paused){playMusic()}else{music.pause();$('musicBtn').classList.remove('playing')}};
 
-    for (let i = 0; i < 42; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 2.1 + 0.6,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: -Math.random() * 0.35 - 0.1,
-        alpha: Math.random() * 0.6 + 0.2,
-        color: i % 5 === 0 ? '#e8a2b4' : '#ebd07e'
-      });
-    }
+/* ---------- share / hashtag ---------- */
+document.querySelectorAll('[data-tag]').forEach(b=>b.onclick=()=>{const t=b.dataset.tag;navigator.clipboard?.writeText(t).then(()=>toast(t+' copied ✓'),()=>toast(t));burst(innerWidth/2,innerHeight*.6,60)});
 
-    function burstConfetti() {
-      for (let i = 0; i < 36; i++) {
-        particles.push({
-          x: canvas.width / 2,
-          y: canvas.height * 0.65,
-          r: Math.random() * 3.5 + 1.5,
-          vx: (Math.random() - 0.5) * 6,
-          vy: -Math.random() * 6 - 2,
-          alpha: 1,
-          color: i % 2 === 0 ? '#f7e7b4' : '#e8a2b4',
-          temp: true
-        });
-      }
-    }
+/* ---------- WhatsApp share: full schedule with dates, timings, venues & dress codes ---------- */
+function inviteText(){
+  const L=[`🪔 *|| Shri Ganeshaya Namah ||* 🪔`,``,`🙏 With the blessings of Prabhu Shri Ram, the *Mishra* & *Dubey* families joyfully invite you to the wedding celebrations of`,``,`💍 *Utkarsh weds Aparna* 💍`,``,`📜 *Schedule of Functions*`];
+  LIST.forEach(e=>{const v=VENUES[e.v],d=CONFIG.dates[e.k];
+    L.push(``,`✨ *${e.title}* — _${e.theme}_`,`📅 ${d?fmtDate(d):'Date to be announced'}`,`⏰ ${e.time}`,`📍 ${v.name}, ${v.addr}`,`🗺️ ${dirURL(e.v)}`);
+    if(e.dress)L.push(`👗 ${e.dress}`);
+    (e.pal||[]).forEach(([g,cs])=>L.push(`🎨 ${g}: ${cs.map(([n,,em])=>em+' '+n).join(' · ')}`))});
+  L.push(``,`Your presence will make our day truly special ❤️`,`With love, The Mishra & Dubey Families`,`${CONFIG.hashtag}`);
+  if(/^https?:/.test(location.protocol))L.push(``,`💌 Open the invitation: ${location.href.split('#')[0]}`);
+  return L.join(String.fromCharCode(10))}
+$('waShare').onclick=()=>{const u='https://api.whatsapp.com/send?text='+encodeURIComponent(inviteText());if(!open(u,'_blank'))location.href=u};
 
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles = particles.filter(p => !p.temp || p.alpha > 0.02);
-      particles.forEach(p => {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.temp) {
-          p.vy += 0.12;
-          p.alpha -= 0.015;
-        } else {
-          if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
-          if (p.x < -10) p.x = canvas.width + 10;
-          if (p.x > canvas.width + 10) p.x = -10;
-        }
-        ctx.globalAlpha = Math.max(0, p.alpha);
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      });
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animateParticles);
-    }
-    animateParticles();
-  </script>
+/* ---------- scroll reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+
+/* ---------- events ---------- */
+function ics(e){const d=CONFIG.dates[e.k];if(!d)return null;const [y,m,dd]=d.split('-');const pad=n=>String(n).padStart(2,'0');
+  const st=`${y}${m}${dd}T${pad(e.hm[0])}${pad(e.hm[1])}00`,en=`${y}${m}${dd}T${pad(Math.min(e.hm[0]+3,23))}${pad(e.hm[1])}00`;const v=VENUES[e.v];
+  return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Utkarna//EN\nBEGIN:VEVENT\nUID:${e.k}@utkarna\nDTSTART;TZID=Asia/Kolkata:${st}\nDTEND;TZID=Asia/Kolkata:${en}\nSUMMARY:${e.title} - Utkarsh & Aparna\nLOCATION:${v.name}, ${v.addr}\nDESCRIPTION:${e.theme} ${CONFIG.hashtag}\nBEGIN:VALARM\nTRIGGER:-PT3H\nACTION:DISPLAY\nDESCRIPTION:Reminder\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR`)}
+const dirURL=v=>`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(VENUES[v].q)}`;
+$('eventList').innerHTML=LIST.map((e,i)=>{const v=VENUES[e.v],d=CONFIG.dates[e.k],cal=ics(e);return `
+ <div class="event reveal"><div class="card">
+  <div class="pic"><img src="images/web/${e.img}.jpg" alt="${e.title}" loading="lazy"><span class="badge">${String(i+1).padStart(2,'0')} · ${e.theme}</span></div>
+  <div class="body jharokha">
+   <h3>${e.title}</h3>
+   ${d?`<div class="date">${fmtDate(d)}</div>`:''}
+   <div class="time">${e.time}</div>
+   <div class="venue">${v.name}</div><div class="addr">${v.addr}</div>
+   ${e.dress?`<div style="margin-top:8px;font-style:italic;color:var(--gold2)">${e.dress}</div>`:''}
+   ${e.pal?`<div class="swatches">${e.pal.map(([g,cs])=>`<div><div class="grp">${g}</div><div class="row">${cs.map(([n,c])=>`<span class="sw"><i style="background:${c}"></i>${n}</span>`).join('')}</div></div>`).join('')}</div>`:''}
+   <div class="btns">
+    <a class="btn" href="${dirURL(e.v)}" target="_blank" rel="noopener">➤ Directions</a>
+    ${cal?`<a class="btn ghost" href="${cal}" download="${e.k}.ics">📅 Add to Calendar</a>`:`<button class="btn ghost" disabled title="Date coming soon">📅 Date Soon</button>`}
+   </div>
+  </div></div></div>`}).join('');
+// 3D tilt on cards
+document.querySelectorAll('.event .card').forEach(c=>{
+  c.addEventListener('pointermove',ev=>{const r=c.getBoundingClientRect();const x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg)`});
+  c.addEventListener('pointerleave',()=>c.style.transform='')});
+// parallax on event images
+addEventListener('scroll',()=>{document.querySelectorAll('.event .pic img').forEach(img=>{const r=img.parentElement.getBoundingClientRect();const p=(r.top+r.height/2-innerHeight/2)/innerHeight;img.style.transform=`scale(1.18) translateY(${p*-24}px)`})},{passive:true});
+
+/* ---------- venues / map ---------- */
+const usedV=[...new Set(LIST.map(e=>e.v))];
+function showVenue(k){const v=VENUES[k];
+  $('venueInfo').innerHTML=`<div style="font-size:24px;color:var(--gold);font-weight:600">${v.name}</div><div>${v.addr}</div><div style="font-size:15px;opacity:.85;margin-top:4px">${LIST.filter(e=>e.v===k).map(e=>e.title).join(' · ')}</div>`;
+  $('mapFrame').src=`https://maps.google.com/maps?q=${encodeURIComponent(v.q)}&z=15&output=embed`;
+  $('dirBtn').href=dirURL(k);
+  document.querySelectorAll('#venueTabs .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===k));}
+$('venueTabs').innerHTML=usedV.map(k=>`<button class="chip" data-v="${k}">${VENUES[k].name}</button>`).join('');
+$('venueTabs').onclick=e=>{if(e.target.dataset.v)showVenue(e.target.dataset.v)};
+showVenue(usedV[0]);
+
+/* ---------- RSVP ---------- */
+let guests=2,attending=true;
+$('rEvents').innerHTML=LIST.map(e=>`<label><input type="checkbox" value="${e.title}" checked>${e.title}</label>`).join('');
+$('gMinus').onclick=()=>{guests=Math.max(1,guests-1);$('gCount').textContent=guests};
+$('gPlus').onclick=()=>{guests=Math.min(20,guests+1);$('gCount').textContent=guests};
+document.querySelectorAll('[data-yn]').forEach(b=>b.onclick=()=>{attending=b.dataset.yn==='yes';document.querySelectorAll('[data-yn]').forEach(x=>x.classList.toggle('on',x===b));$('yesPart').style.display=attending?'':'none'});
+$('rsvpForm').onsubmit=ev=>{ev.preventDefault();
+  const name=$('rName').value.trim();if(!name){$('rName').focus();return}
+  const evs=[...document.querySelectorAll('#rEvents input:checked')].map(i=>i.value);
+  let t=`🙏 *RSVP — Utkarsh & Aparna* ${CONFIG.hashtag}\n\nName: ${name}\n`;
+  t+=attending?`Attending: Yes ✅\nGuests: ${guests}\nEvents: ${evs.join(', ')||'—'}\n`:`Attending: Sorry, can't make it 🙏\n`;
+  if($('rMsg').value.trim())t+=`\nBlessings: ${$('rMsg').value.trim()}`;
+  burst(innerWidth/2,innerHeight*.7,120);toast('Opening WhatsApp…');
+  setTimeout(()=>open(`https://wa.me/${CONFIG.rsvpPhone||''}?text=${encodeURIComponent(t)}`,'_blank'),600);};
+
+/* ---------- scratch card ---------- */
+(function(){
+  const wd=CONFIG.dates.wedding;
+  if(wd){$('scratchDate').textContent=new Date(wd+'T00:00').toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});$('scratchSub').textContent=fmtDate(wd).split(',')[0]+' · 7:00 PM · Kanpur';}
+  const c=$('scratch'),x=c.getContext('2d');const W=c.width,H=c.height;
+  const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#a8701a');g.addColorStop(.5,'#f0c35a');g.addColorStop(1,'#a8701a');
+  x.fillStyle=g;x.fillRect(0,0,W,H);
+  for(let i=0;i<260;i++){x.fillStyle=`rgba(255,255,255,${Math.random()*.25})`;x.fillRect(Math.random()*W,Math.random()*H,2,2)}
+  x.fillStyle='#4a0a1a';x.font='600 22px Cinzel, serif';x.textAlign='center';x.fillText('✦ SCRATCH HERE ✦',W/2,H/2+4);
+  x.font='15px Cormorant Garamond, serif';x.fillText('to reveal the wedding date',W/2,H/2+28);
+  x.globalCompositeOperation='destination-out';let down=false,done=false;
+  const pos=e=>{const r=c.getBoundingClientRect();return[(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height]};
+  const scr=e=>{if(!down||done)return;const[px,py]=pos(e);x.beginPath();x.arc(px,py,22,0,Math.PI*2);x.fill();check()};
+  let n=0;function check(){if(++n%8)return;const d=x.getImageData(0,0,W,H).data;let cl=0;for(let i=3;i<d.length;i+=16)if(d[i]===0)cl++;
+    if(cl/(d.length/16)>.5){done=true;c.style.transition='opacity .6s';c.style.opacity=0;setTimeout(()=>c.remove(),700);const r=c.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,160);if(navigator.vibrate)navigator.vibrate([30,40,30])}}
+  c.addEventListener('pointerdown',e=>{down=true;c.setPointerCapture(e.pointerId);scr(e)});
+  c.addEventListener('pointermove',scr);addEventListener('pointerup',()=>down=false);
+})();
+
+/* ---------- countdown ---------- */
+(function(){
+  const wd=CONFIG.dates.wedding;
+  if(!wd){$('count').innerHTML='<div style="width:auto;padding:12px 22px"><b style="font-size:20px">Date</b><small>announcing soon</small></div>';return}
+  const target=new Date(wd+'T19:00:00+05:30').getTime();
+  const tick=()=>{let s=Math.max(0,Math.floor((target-Date.now())/1000));
+    if(s===0){$('count').innerHTML='<div style="width:auto;padding:12px 22px"><b style="font-size:22px">Today!</b><small>The big day is here</small></div>';return}
+    const p=n=>String(n).padStart(2,'0');$('cd-d').textContent=Math.floor(s/86400);$('cd-h').textContent=p(Math.floor(s%86400/3600));$('cd-m').textContent=p(Math.floor(s%3600/60));$('cd-s').textContent=p(s%60);setTimeout(tick,1000)};
+  tick();
+})();
+
+/* ---------- falling petals ---------- */
+(function(){const c=$('petals'),x=c.getContext('2d');let W,H;const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight};rs();addEventListener('resize',rs);
+  const cols=['#f59e0b','#fb923c','#ef4444','#fbbf24','#f472b6'];
+  const P=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H,s:6+Math.random()*8,v:.4+Math.random()*.9,a:Math.random()*6,r:Math.random()*.04,c:cols[Math.floor(Math.random()*cols.length)]}));
+  (function f(){x.clearRect(0,0,W,H);P.forEach(p=>{p.y+=p.v;p.x+=Math.sin(p.a)*.6;p.a+=p.r;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+    x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.globalAlpha=.8;x.beginPath();x.ellipse(0,0,p.s*.6,p.s,0,0,Math.PI*2);x.fill();x.restore()});requestAnimationFrame(f)})();})();
+
+/* ---------- confetti burst ---------- */
+const CF=$('confetti'),cx=CF.getContext('2d');let parts=[];const crs=()=>{CF.width=innerWidth;CF.height=innerHeight};crs();addEventListener('resize',crs);
+function burst(x0,y0,n){for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,sp=3+Math.random()*7;parts.push({x:x0,y:y0,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-3,l:90+Math.random()*40,c:['#e6b34a','#fde68a','#ef4444','#f59e0b','#fff3d6','#f472b6'][i%6],s:4+Math.random()*5,r:Math.random()*6})}if(parts.length===n)loopC()}
+function loopC(){cx.clearRect(0,0,CF.width,CF.height);parts=parts.filter(p=>p.l-->0);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.18;p.vx*=.98;p.r+=.2;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.l/40);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});if(parts.length)requestAnimationFrame(loopC);else cx.clearRect(0,0,CF.width,CF.height)}
+
+/* ---------- fireworks ---------- */
+const FW=$('fw'),fx=FW.getContext('2d');let rockets=[],sparks=[],fwRun=false;
+const fwr=()=>{FW.width=innerWidth;FW.height=innerHeight};fwr();addEventListener('resize',fwr);
+const FWC=['#ffd54a','#ffb703','#fb8500','#ff006e','#ffffff','#f97316','#fde68a','#ef4444'];
+function launch(){const x=innerWidth*(.15+Math.random()*.7);rockets.push({x,y:innerHeight,vx:(Math.random()-.5)*1.5,vy:-(9+Math.random()*4),t:30+Math.random()*25,c:FWC[Math.floor(Math.random()*FWC.length)]});fwLoop()}
+function explode(r){const n=70+Math.random()*50,type=Math.random();for(let i=0;i<n;i++){const a=i/n*Math.PI*2,sp=type<.5?2+Math.random()*4:4.2+Math.random()*.6;
+  sparks.push({x:r.x,y:r.y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,l:60+Math.random()*40,c:Math.random()<.25?'#fff':r.c})}}
+function fwLoop(){if(fwRun)return;fwRun=true;(function f(){fx.globalCompositeOperation='destination-out';fx.fillStyle='rgba(0,0,0,.22)';fx.fillRect(0,0,FW.width,FW.height);fx.globalCompositeOperation='lighter';
+  rockets=rockets.filter(r=>{r.x+=r.vx;r.y+=r.vy;r.vy+=.12;fx.fillStyle='#fff3c2';fx.beginPath();fx.arc(r.x,r.y,2.2,0,7);fx.fill();if(--r.t<=0||r.vy>-1){explode(r);return false}return true});
+  sparks=sparks.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.05;p.vx*=.985;p.vy*=.985;fx.globalAlpha=Math.max(0,Math.min(1,p.l/50));fx.fillStyle=p.c;fx.beginPath();fx.arc(p.x,p.y,1.8,0,7);fx.fill();fx.globalAlpha=1;return --p.l>0});
+  if(rockets.length||sparks.length)requestAnimationFrame(f);else{fx.clearRect(0,0,FW.width,FW.height);fwRun=false}})()}
+function show(n,ms){for(let i=0;i<n;i++)setTimeout(launch,Math.random()*ms)}
+$('fwBtn').onclick=()=>{show(10,2500);if(navigator.vibrate)navigator.vibrate([20,60,20])};
+// auto fireworks when countdown / closing come into view
+const fwio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)show(6,1800)}),{threshold:.6});
+fwio.observe($('countWrap'));fwio.observe($('closing'));
+
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
