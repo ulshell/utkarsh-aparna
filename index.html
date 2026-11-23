@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#c2410c">
 <link rel="preload" as="image" href="images/web/bg_gate.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <style>
 :root{--maroon:#7c2d12;--maroon2:#c2410c;--saffron:#f97316;--gold:#f6c453;--gold2:#ffe8a3;--cream:#fff7e6;--ink:#3b1203}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -206,6 +206,11 @@ h2.title{font-family:'Great Vibes',cursive;font-weight:400;font-size:56px;color:
 .btn.ghost{background:transparent;color:var(--gold2);border:1.5px solid var(--gold);box-shadow:none}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 
+/* hindi text */
+.hi{font-family:'Tiro Devanagari Hindi','Nirmala UI',Mangal,serif;letter-spacing:0;text-transform:none}
+.hi-big{font-family:'Tiro Devanagari Hindi','Nirmala UI',Mangal,serif;color:var(--gold);font-size:30px;line-height:1.35;text-shadow:0 0 18px rgba(240,195,90,.35)}
+.chaupai{font-family:'Tiro Devanagari Hindi','Nirmala UI',Mangal,serif;font-size:19px;line-height:1.7;color:var(--gold2);margin-top:14px}
+.event .hi-t{font-family:'Tiro Devanagari Hindi','Nirmala UI',Mangal,serif;font-size:22px;color:var(--gold2);margin-top:2px}
 /* dress colour guide */
 .swatches{margin-top:12px;display:flex;flex-direction:column;gap:10px;align-items:center}
 .swatches .grp{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.2em;color:var(--gold2)}
@@ -258,7 +263,7 @@ nav.dock a:active{background:var(--gold);color:var(--ink)}
   <div class="ribbon"><i></i><i></i></div>
   <div class="bow"><b></b><b></b><s></s><s></s></div>
   <button class="seal" id="seal" aria-label="Open invitation"><b>U&amp;A</b><small>TAP TO OPEN</small></button>
-  <div class="gate-hint2"><span class="script">Jai Shri Ram</span></div>
+  <div class="gate-hint2"><span class="hi" style="font-size:46px;color:#ffe8a3;text-shadow:0 0 20px #f97316,0 2px 4px #000">॥ जय श्री राम ॥</span></div>
   <div class="gate-hint"><span class="script">You're invited</span><span id="guestLine">Tap the seal to cut the ribbon</span></div>
 </div>
 
@@ -276,23 +281,26 @@ nav.dock a:active{background:var(--gold);color:var(--ink)}
     <div class="hero-bg"></div>
     <div class="lanterns"><i class="lantern" style="height:70px"></i><i class="lantern" style="height:40px"></i><i class="lantern" style="height:40px"></i><i class="lantern" style="height:70px"></i></div>
     <div data-palace="hero" style="margin-bottom:18px"></div>
-    <div class="kick shloka">|| श्री गणेशाय नमः ||</div>
+    <div class="kick shloka hi" style="font-size:20px;letter-spacing:.05em">॥ श्री गणेशाय नमः ॥</div>
     <div data-chhatri></div><div class="arch-img" style="max-width:300px;margin-top:18px"><img src="images/web/ganesh.jpg" alt="Shri Ganesh"></div>
-    <p style="margin-top:16px;font-style:italic;font-size:17px">Vakratunda Mahakaya Suryakoti Samaprabha<br>Nirvighnam Kuru Me Deva Sarva-Karyeshu Sarvada</p>
+    <p class="chaupai" style="margin-top:16px">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</p>
     <div class="rule"></div>
-    <div class="kick">Together with their families</div>
+    <div class="hi-big" style="margin-top:4px">॥ शुभ विवाह ॥</div>
+    <div class="kick" style="margin-top:10px">Together with their families</div>
     <div class="names script gold" style="margin-top:10px">Utkarsh</div>
     <div class="weds">weds</div>
     <div class="names script gold">Aparna</div>
+    <div class="hi-big" style="font-size:26px;margin-top:8px">उत्कर्ष <span style="font-size:20px;color:var(--gold2)">संग</span> अपर्णा</div>
     <div class="scroll-hint">▼ scroll to explore ▼</div>
   </section>
 
   <!-- BLESSINGS / FAMILY -->
   <section class="reveal family">
     <div class="frame">
-      <div class="kick">|| Jai Siya Ram ||</div>
+      <div class="kick hi" style="font-size:20px;letter-spacing:.05em">॥ जय सिया राम ॥</div>
       <div data-chhatri></div><div class="arch-img" style="max-width:280px;margin-top:16px"><img src="images/web/ram_darbar.jpg" alt="Shri Ram Darbar"></div>
-      <p class="script gold" style="font-size:36px;margin-top:10px">Siyavar Ramchandra Ki Jai</p>
+      <p class="hi-big" style="margin-top:10px">॥ सियावर रामचंद्र की जय ॥</p>
+      <p class="chaupai">मंगल भवन अमंगल हारी ।<br>द्रवउ सो दसरथ अजिर बिहारी ॥</p>
       <p style="margin-top:18px">With the divine blessings of</p>
       <p><b>Late Shri Chandradev Mishra</b><br>&amp;<br><b>Smt. Indravati Mishra</b></p>
       <div class="rule"></div>
@@ -305,6 +313,8 @@ nav.dock a:active{background:var(--gold);color:var(--ink)}
       <p style="font-size:16px;opacity:.9">daughter of</p>
       <div class="fam" style="margin-top:6px">Dubey Family</div>
       <p><b>Mr. Rajesh Dubey &amp; Mrs. Sheela Dubey</b></p>
+      <div class="rule"></div>
+      <p class="hi" style="font-size:19px;line-height:1.7">परम पिता परमेश्वर की असीम अनुकम्पा से<br>हमारे सुपुत्र <b>चि. उत्कर्ष</b> का शुभ विवाह<br><b>आयु. अपर्णा</b> के साथ होना निश्चित हुआ है।<br>इस मंगल अवसर पर आप सपरिवार सादर आमंत्रित हैं।</p>
     </div>
   </section>
 
@@ -354,7 +364,7 @@ nav.dock a:active{background:var(--gold);color:var(--ink)}
       <figure><img src="images/web/baraat.jpg" alt="Baraat" loading="lazy"><figcaption>The Baraat</figcaption></figure>
       <figure><img src="images/web/ayodhya_ghat.jpg" alt="Deepotsav" loading="lazy"><figcaption>A Night of Diyas</figcaption></figure>
       <figure><img src="images/web/couple_fireworks.jpg" alt="Celebration" loading="lazy"><figcaption>Sparkles &amp; Smiles</figcaption></figure>
-      <figure><img src="images/web/bg_gate.jpg" alt="Shri Ram Mandir" loading="lazy"><figcaption>Jai Shri Ram</figcaption></figure>
+      <figure><img src="images/web/bg_gate.jpg" alt="Shri Ram Mandir" loading="lazy"><figcaption class="hi" style="font-size:28px">जय श्री राम</figcaption></figure>
     </div>
     <p style="font-size:14px;opacity:.75">swipe ⟷</p>
   </section>
@@ -400,7 +410,9 @@ nav.dock a:active{background:var(--gold);color:var(--ink)}
     <div class="closing" id="closing" style="margin-top:26px"><img src="images/web/couple_fireworks.jpg" alt="Utkarsh and Aparna" loading="lazy">
       <div class="txt">
         <p class="script gold" style="font-size:42px;line-height:1.15">Your presence will make<br>our day truly special</p>
+        <p class="hi-big" style="font-size:22px;margin-top:6px">आपकी उपस्थिति हमारा सौभाग्य होगी</p>
         <p style="margin-top:10px">With love,<br><b class="gold">The Mishra &amp; Dubey Families</b></p>
+        <p class="hi" style="font-size:18px;color:var(--gold2)">स्वागतोत्सुक — मिश्रा एवं दुबे परिवार</p>
         <p class="script" style="font-size:32px;color:#ffb3c1;margin-top:8px">♥ Tenu leke jaunga ♥</p>
       </div></div>
     <div class="btns" style="margin-top:18px"><button class="btn" id="fwBtn">🎆 Celebrate!</button><button class="btn ghost" id="waShare">📲 Share on WhatsApp</button></div>
@@ -426,14 +438,14 @@ const VENUES = {
   kesari:{name:"Kesari Mangalam", addr:"Damodar Nagar, Kanpur", q:"Kesari Mangalam Damodar Nagar Kanpur"},
 };
 const EVENTS = [
-  {k:"haldi",   theme:"Haldi Mela",              title:"Haldi",                    time:"10:00 AM", hm:[10,0],  v:"kesari", img:"haldi",   dress:"Dress code: Any pastel colours",
+  {k:"haldi", hi:"हल्दी",   theme:"Haldi Mela",              title:"Haldi",                    time:"10:00 AM", hm:[10,0],  v:"kesari", img:"haldi",   dress:"Dress code: Any pastel colours",
     pal:[["Pastels",[["Blush Pink","#f8c8dc","🩷"],["Lemon","#fff3b0","💛"],["Baby Blue","#bde0fe","🩵"],["Lavender","#cdb4db","💜"],["Mint","#b9fbc0","💚"],["Peach","#ffd6a5","🧡"]]]]},
-  {k:"tilak",   theme:"Baat Pakki",              title:"Tilak & Bariksha",         time:"6:00 PM",  hm:[18,0],  v:"lawn",   img:"tilak",   dress:""},
-  {k:"godh",    theme:"Shagan Di Shaam",         title:"Godh Bharai",              time:"7:00 PM",  hm:[19,0],  v:"lawn",   img:"godh",    dress:""},
-  {k:"sangeet", theme:"Sealed With a Ring",      title:"Ring Ceremony & Sangeet",  time:"9:00 PM",  hm:[21,0],  v:"lawn",   img:"sangeet", dress:"Dress code: Men – dark suits / Indo-western · Women – shimmery silver or golden sarees, gowns or lehengas",
+  {k:"tilak", hi:"तिलक एवं बरीक्षा",   theme:"Baat Pakki",              title:"Tilak & Bariksha",         time:"6:00 PM",  hm:[18,0],  v:"lawn",   img:"tilak",   dress:""},
+  {k:"godh", hi:"गोद भराई",    theme:"Shagan Di Shaam",         title:"Godh Bharai",              time:"7:00 PM",  hm:[19,0],  v:"lawn",   img:"godh",    dress:""},
+  {k:"sangeet", hi:"अंगूठी रस्म एवं संगीत", theme:"Sealed With a Ring",      title:"Ring Ceremony & Sangeet",  time:"9:00 PM",  hm:[21,0],  v:"lawn",   img:"sangeet", dress:"Dress code: Men – dark suits / Indo-western · Women – shimmery silver or golden sarees, gowns or lehengas",
     pal:[["Men",[["Black","#0b0b0b","🖤"],["Midnight Navy","#14213d","💙"],["Charcoal","#36454f","🩶"],["Deep Wine","#4a0e1c","🍷"]]],
          ["Women",[["Silver","linear-gradient(135deg,#8e8e8e,#f4f4f4 45%,#a9a9a9 60%,#ffffff)","🤍"],["Gold","linear-gradient(135deg,#a8701a,#ffe8a3 45%,#d4a017 60%,#fff3c2)","💛"],["Champagne","linear-gradient(135deg,#c9b28a,#f7e7ce 50%,#d8c3a0)","🥂"],["Rose Gold","linear-gradient(135deg,#b76e79,#f7d0c4 50%,#c98c87)","🩷"]]]]},
-  {k:"wedding", theme:"The Beginning of Forever",title:"Wedding",                  time:"7:00 PM",  hm:[19,0],  v:"kesari", img:"wedding", dress:"Dress code: Any – come as you like!"},
+  {k:"wedding", hi:"शुभ विवाह", theme:"The Beginning of Forever",title:"Wedding",                  time:"7:00 PM",  hm:[19,0],  v:"kesari", img:"wedding", dress:"Dress code: Any – come as you like!"},
 ];
 /* ?v=2 → only Tilak, Godh Bharai, Sangeet.  ?to=Name → personalised greeting */
 /* ============================================================== */
@@ -505,12 +517,12 @@ document.querySelectorAll('[data-tag]').forEach(b=>b.onclick=()=>{const t=b.data
 
 /* ---------- WhatsApp share: full schedule with dates, timings, venues & dress codes ---------- */
 function inviteText(){
-  const L=[`🪔 *|| Shri Ganeshaya Namah ||* 🪔`,``,`🙏 With the blessings of Prabhu Shri Ram, the *Mishra* & *Dubey* families joyfully invite you to the wedding celebrations of`,``,`💍 *Utkarsh weds Aparna* 💍`,``,`📜 *Schedule of Functions*`];
+  const L=[`🪔 *॥ श्री गणेशाय नमः ॥* 🪔`,`_वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥_`,``,`*॥ जय सिया राम ॥*`,``,`🙏 With the blessings of Prabhu Shri Ram, the *Mishra* & *Dubey* families joyfully invite you to the wedding celebrations of`,``,`💍 *Utkarsh weds Aparna* 💍`,`*॥ उत्कर्ष संग अपर्णा ॥*`,``,`आप सपरिवार सादर आमंत्रित हैं 🙏`,``,`📜 *Schedule of Functions*`];
   LIST.forEach(e=>{const v=VENUES[e.v],d=CONFIG.dates[e.k];
-    L.push(``,`✨ *${e.title}* — _${e.theme}_`,`📅 ${d?fmtDate(d):'Date to be announced'}`,`⏰ ${e.time}`,`📍 ${v.name}, ${v.addr}`,`🗺️ ${dirURL(e.v)}`);
+    L.push(``,`✨ *${e.title}* (${e.hi}) — _${e.theme}_`,`📅 ${d?fmtDate(d):'Date to be announced'}`,`⏰ ${e.time}`,`📍 ${v.name}, ${v.addr}`,`🗺️ ${dirURL(e.v)}`);
     if(e.dress)L.push(`👗 ${e.dress}`);
     (e.pal||[]).forEach(([g,cs])=>L.push(`🎨 ${g}: ${cs.map(([n,,em])=>em+' '+n).join(' · ')}`))});
-  L.push(``,`Your presence will make our day truly special ❤️`,`With love, The Mishra & Dubey Families`,`${CONFIG.hashtag}`);
+  L.push(``,`Your presence will make our day truly special ❤️`,`आपकी उपस्थिति हमारा सौभाग्य होगी 🙏`,``,`With love, The Mishra & Dubey Families`,`स्वागतोत्सुक — मिश्रा एवं दुबे परिवार`,`*॥ जय श्री राम ॥*`,`${CONFIG.hashtag}`);
   if(/^https?:/.test(location.protocol))L.push(``,`💌 Open the invitation: ${location.href.split('#')[0]}`);
   return L.join(String.fromCharCode(10))}
 $('waShare').onclick=()=>{const u='https://api.whatsapp.com/send?text='+encodeURIComponent(inviteText());if(!open(u,'_blank'))location.href=u};
@@ -527,7 +539,7 @@ $('eventList').innerHTML=LIST.map((e,i)=>{const v=VENUES[e.v],d=CONFIG.dates[e.k
  <div class="event reveal"><div class="card">
   <div class="pic"><img src="images/web/${e.img}.jpg" alt="${e.title}" loading="lazy"><span class="badge">${String(i+1).padStart(2,'0')} · ${e.theme}</span></div>
   <div class="body jharokha">
-   <h3>${e.title}</h3>
+   <h3>${e.title}</h3>${e.hi?`<div class="hi-t">${e.hi}</div>`:''}
    ${d?`<div class="date">${fmtDate(d)}</div>`:''}
    <div class="time">${e.time}</div>
    <div class="venue">${v.name}</div><div class="addr">${v.addr}</div>
