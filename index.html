@@ -447,11 +447,14 @@ const EVENTS = [
          ["Women",[["Silver","linear-gradient(135deg,#8e8e8e,#f4f4f4 45%,#a9a9a9 60%,#ffffff)","🤍"],["Gold","linear-gradient(135deg,#a8701a,#ffe8a3 45%,#d4a017 60%,#fff3c2)","💛"],["Champagne","linear-gradient(135deg,#c9b28a,#f7e7ce 50%,#d8c3a0)","🥂"],["Rose Gold","linear-gradient(135deg,#b76e79,#f7d0c4 50%,#c98c87)","🩷"]]]]},
   {k:"wedding", hi:"शुभ विवाह", theme:"The Beginning of Forever",title:"Wedding",                  time:"7:00 PM",  hm:[19,0],  v:"kesari", img:"wedding", dress:"Dress code: Any – come as you like!"},
 ];
-/* ?v=2 → only Tilak, Godh Bharai, Sangeet.  ?to=Name → personalised greeting */
+/* Versions: ?v=2 → Tilak, Godh Bharai, Sangeet · ?v=sw → Ring Ceremony & Sangeet + Wedding · ?v=w → Wedding only.
+   /sangeet-wedding/ and /wedding/ pages preset window.VER.  ?to=Name → personalised greeting */
 /* ============================================================== */
 
 const Q=new URLSearchParams(location.search);
-const LIST = Q.get('v')==='2' ? EVENTS.filter(e=>['tilak','godh','sangeet'].includes(e.k)) : EVENTS;
+const VERSIONS={'2':['tilak','godh','sangeet'],'sw':['sangeet','wedding'],'w':['wedding']};
+const VER=window.VER||Q.get('v');
+const LIST = VERSIONS[VER] ? EVENTS.filter(e=>VERSIONS[VER].includes(e.k)) : EVENTS;
 const $=id=>document.getElementById(id);
 const fmtDate=d=>d?new Date(d+'T00:00').toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'';
 const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)};
